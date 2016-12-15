@@ -1267,7 +1267,7 @@ def dump_id_range_using_multiprocessing():
     import itertools  # python 2.x can not iterate over 'long int' cause overflow error
     range = lambda start, stop: iter(itertools.count(start).next, stop)
 
-    process_count = 7  # mp.cpu_count()
+    process_count = 4  # mp.cpu_count()
     po = mp.Pool(process_count)
     po.map(initialize_process, xrange(process_count))
 
