@@ -286,6 +286,7 @@ def load_plugins():
         "VectorRender.mll",
         "dx11Shader.mll",
         "OpenEXRLoader.mll",
+        "MASH.mll",
         "mayaHIK.mll",
         "MayaMuscle.mll",
         "modelingToolkit.mll",
