@@ -1,0 +1,670 @@
+.. index::
+    single: ilrAshikhminShader
+    single: 0x107d96L
+    single: category; shader; surface
+
+Turtle.mll - ilrAshikhminShader (0x107d96L)
+=======================================================================================================================================
+
+:classification:
+    
+    shader/surface
+    
+
+:plugin:
+    C:/Program Files/Autodesk/Maya2017/bin/plug-ins/Turtle.mll
+
+:id:
+    0x107d96L
+
+
+
+
+Attributes(43)
+--------------------------------------
+
+
+
+
+
+.. raw:: html
+
+    <table class="attribute">
+        <tbody>
+            <tr>
+                <th class="attr_name">Long name (short name)</th>
+                <th class="attr_type">Type</th>
+                <th class="attr_default">Value(Default)</th>
+                <th class="attr_minmax">Min/Max</th>
+                <th class="attr_flags">Flags</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>attenuateReflections (ar)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>attenuationEnd (ae)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">15.0 (15)</td>
+                <td class="attr_minmax">0/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>attenuationStart (as)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">10.0 (10)</td>
+                <td class="attr_minmax">0/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>diffuse (d)</h5></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseG (dg)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.800000011921 (0.80000001192092896)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseB (db)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.800000011921 (0.80000001192092896)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseR (dr)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.800000011921 (0.80000001192092896)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>ior (i)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">6.0 (6)</td>
+                <td class="attr_minmax">1/20</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>iorRef (iorr)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">6.0 (6)</td>
+                <td class="attr_minmax">1/20</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>matchSpec (msp)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">True (1)</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>maxGlossyRays (gr)</h5></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">9.0 (9)</td>
+                <td class="attr_minmax">1/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>normalCamera (nc)</h5></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>normalCameraR (ncr)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>normalCameraB (ncb)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>normalCameraG (ncg)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>phongExpU (peu)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">1.0 (1)</td>
+                <td class="attr_minmax">0.01/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>phongExpURef (peur)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">1.0 (1)</td>
+                <td class="attr_minmax">0.01/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>phongExpV (pev)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">100.0 (100)</td>
+                <td class="attr_minmax">0.01/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>phongExpVRef (pevr)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">100.0 (100)</td>
+                <td class="attr_minmax">0.01/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>reflectedColor (rc)</h5></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>reflectedColorG (rcg)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>reflectedColorR (rcr)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>reflectedColorB (rcb)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>reflectivity (r)</h5></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>reflectivityB (rb)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.5 (0.5)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>reflectivityG (rg)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.5 (0.5)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>reflectivityR (rr)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.5 (0.5)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>rotation (rot)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">0/360</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>rotationRef (rotr)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">0/360</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>specular (s)</h5></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>specularB (sb)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.5 (0.5)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>specularR (sr)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.5 (0.5)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>specularG (sg)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.5 (0.5)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+
+            
+            <tr>
+                <th colspan="6">extern visible nodes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>frozen (fzn)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>outColor (oc)</h5></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>outColorB (ocb)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.5 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>outColorR (ocr)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.5 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>outColorG (ocg)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.5 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out']</td>
+            </tr>
+
+
+    
+
+            
+            <tr>
+                <th colspan="6">extern hidden nodes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>isHistoricallyInteresting (ihi)</h5></td>
+                <td class="attr_type">byte</td>
+                <td class="attr_value">True (2)</td>
+                <td class="attr_minmax">0/255</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'hidden']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>message (msg)</h5></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out', 'hidden']</td>
+            </tr>
+
+
+            
+            <tr>
+                <th colspan="6">internal nodes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>binMembership (bnm)</h5></td>
+                <td class="attr_type"></td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['storable', 'hidden']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>caching (cch)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>nodeState (nds)</h5></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">Normal</br>HasNoEffect</br>Blocking</br>Waiting-Normal=8</br>Waiting-HasNoEffect</br>Waiting-Blocking ()</td>
+                <td class="attr_minmax">0/10</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+        </tbody>
+    </table>
+    

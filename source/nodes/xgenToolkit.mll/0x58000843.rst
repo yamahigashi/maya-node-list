@@ -1,0 +1,410 @@
+.. index::
+    single: xgmModifierGuide
+    single: 0x58000843
+    single: category; xgen; spline; modifier; guide
+
+xgenToolkit.mll - xgmModifierGuide (0x58000843)
+=======================================================================================================================================
+
+:classification:
+    
+    xgen/spline/modifier/guide
+    
+
+:plugin:
+    C:/Program Files/Autodesk/Maya2017/plug-ins/xgen/plug-ins/xgenToolkit.mll
+
+:id:
+    0x58000843
+
+
+
+
+Attributes(24)
+--------------------------------------
+
+
+
+
+
+.. raw:: html
+
+    <table class="attribute">
+        <tbody>
+            <tr>
+                <th class="attr_name">Long name (short name)</th>
+                <th class="attr_type">Type</th>
+                <th class="attr_default">Value(Default)</th>
+                <th class="attr_minmax">Min/Max</th>
+                <th class="attr_flags">Flags</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>blend (bl)</h5></td>
+                <td class="attr_type">double</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>inGuideData (igd)</h5></td>
+                <td class="attr_type"></td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>inSplineData (isd)</h5></td>
+                <td class="attr_type"></td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>magnitude (mg)</h5></td>
+                <td class="attr_type">double</td>
+                <td class="attr_value">1.0 (1)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>mask (mk)</h5></td>
+                <td class="attr_type">double</td>
+                <td class="attr_value">1.0 (1)</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>previewColor (pc)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>regionMask (rm)</h5></td>
+                <td class="attr_type">double</td>
+                <td class="attr_value">1.0 (1)</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>useRegionMap (urm)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+            <tr>
+                <th colspan="6">extern visible nodes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>frozen (fzn)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>magnitudeScale (ms)</h5></td>
+                <td class="attr_type">compound</td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>magnitudeScale_Interp (msi)</h5></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">None</br>Linear</br>Smooth</br>Spline (1)</td>
+                <td class="attr_minmax">0/3</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>magnitudeScale_FloatValue (msfv)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>magnitudeScale_Position (msp)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>mute (m)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>outSplineData (osd)</h5></td>
+                <td class="attr_type"></td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>regionMap (rmp)</h5></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>regionMapB (rmpb)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">1.0 (1)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>regionMapR (rmpr)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">1.0 (1)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>regionMapG (rmpg)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">1.0 (1)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+
+            
+            <tr>
+                <th colspan="6">extern hidden nodes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>isHistoricallyInteresting (ihi)</h5></td>
+                <td class="attr_type">byte</td>
+                <td class="attr_value">True (2)</td>
+                <td class="attr_minmax">0/255</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'hidden']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>message (msg)</h5></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out', 'hidden']</td>
+            </tr>
+
+
+            
+            <tr>
+                <th colspan="6">internal nodes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>binMembership (bnm)</h5></td>
+                <td class="attr_type"></td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['storable', 'hidden']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>caching (cch)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>nodeState (nds)</h5></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">Normal</br>HasNoEffect</br>Blocking</br>Waiting-Normal=8</br>Waiting-HasNoEffect</br>Waiting-Blocking ()</td>
+                <td class="attr_minmax">0/10</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>previewColor (pc)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+            
+        </tbody>
+    </table>
+    

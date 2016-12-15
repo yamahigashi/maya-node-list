@@ -25,7 +25,7 @@ _default - polyBridgeEdge (0x50425245)
 
 
 
-Attributes(32)
+Attributes(36)
 --------------------------------------
 
 
@@ -49,53 +49,11 @@ Attributes(32)
             <tr class="indent0">
     
 
-                <td class="attr_name" style="text-indent: 0ex;"><h5>bridgeOffset (bo)</h5></td>
-                <td class="attr_type">long</td>
-                <td class="attr_value">0.0 ()</td>
-                <td class="attr_minmax">0/</td>
-                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
-            </tr>
-
-
-            
-                
-    
-            <tr class="indent0">
-    
-
-                <td class="attr_name" style="text-indent: 0ex;"><h5>curveType (ctp)</h5></td>
-                <td class="attr_type">enum</td>
-                <td class="attr_value">Linear</br>Blend</br>Curve ()</td>
-                <td class="attr_minmax">0/2</td>
-                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
-            </tr>
-
-
-            
-                
-    
-            <tr class="indent0">
-    
-
                 <td class="attr_name" style="text-indent: 0ex;"><h5>divisions (dv)</h5></td>
                 <td class="attr_type">long</td>
                 <td class="attr_value">1.0 (1)</td>
                 <td class="attr_minmax">0/</td>
                 <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
-            </tr>
-
-
-            
-                
-    
-            <tr class="indent0">
-    
-
-                <td class="attr_name" style="text-indent: 0ex;"><h5>smoothingAngle (sma)</h5></td>
-                <td class="attr_type">doubleAngle</td>
-                <td class="attr_value">0.523598775598 (0.52359877559829882)</td>
-                <td class="attr_minmax">/</td>
-                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
             </tr>
 
 
@@ -195,6 +153,48 @@ Attributes(32)
             <tr class="indent0">
     
 
+                <td class="attr_name" style="text-indent: 0ex;"><h5>bridgeOffset (bo)</h5></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">0/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>curveType (ctp)</h5></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">Linear</br>Blend</br>Curve ()</td>
+                <td class="attr_minmax">0/2</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>direction (d)</h5></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">Auto</br>Custom ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
                 <td class="attr_name" style="text-indent: 0ex;"><h5>frozen (fzn)</h5></td>
                 <td class="attr_type">bool</td>
                 <td class="attr_value">False ()</td>
@@ -251,6 +251,48 @@ Attributes(32)
             <tr class="indent0">
     
 
+                <td class="attr_name" style="text-indent: 0ex;"><h5>reverse (rev)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>smoothingAngle (sma)</h5></td>
+                <td class="attr_type">doubleAngle</td>
+                <td class="attr_value">0.523598775598 (0.52359877559829882)</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>sourceDirection (sd)</h5></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">+</br>- ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
                 <td class="attr_name" style="text-indent: 0ex;"><h5>startVert1 (sv1)</h5></td>
                 <td class="attr_type">long</td>
                 <td class="attr_value">-1.0 (true)</td>
@@ -269,6 +311,20 @@ Attributes(32)
                 <td class="attr_type">long</td>
                 <td class="attr_value">-1.0 (true)</td>
                 <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>targetDirection (td)</h5></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">+</br>- ()</td>
+                <td class="attr_minmax">0/1</td>
                 <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
             </tr>
 

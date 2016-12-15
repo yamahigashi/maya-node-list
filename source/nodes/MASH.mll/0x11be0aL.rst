@@ -9,7 +9,7 @@ MASH.mll - MASH_Symmetry (0x11be0aL)
     
 
 :plugin:
-    D:/Program Files/Autodesk/Maya2017/plug-ins/MASH/plug-ins/MASH.mll
+    C:/Program Files/Autodesk/Maya2017/plug-ins/MASH/plug-ins/MASH.mll
 
 :id:
     0x11be0aL
@@ -801,7 +801,7 @@ Attributes(66)
 
                 <td class="attr_name" style="text-indent: 4ex;"><h5>reflectionVector2 (reflectionVector2)</h5></td>
                 <td class="attr_type">float</td>
-                <td class="attr_value">11811835904.0 ()</td>
+                <td class="attr_value">8.53821655577e-28 ()</td>
                 <td class="attr_minmax">/</td>
                 <td class="attr_flags">['connectable', 'out']</td>
             </tr>
@@ -815,7 +815,7 @@ Attributes(66)
 
                 <td class="attr_name" style="text-indent: 4ex;"><h5>reflectionVector1 (reflectionVector1)</h5></td>
                 <td class="attr_type">float</td>
-                <td class="attr_value">7.17464813734e-43 ()</td>
+                <td class="attr_value">1.02294787896e-42 ()</td>
                 <td class="attr_minmax">/</td>
                 <td class="attr_flags">['connectable', 'out']</td>
             </tr>
@@ -829,7 +829,7 @@ Attributes(66)
 
                 <td class="attr_name" style="text-indent: 4ex;"><h5>reflectionVector0 (reflectionVector0)</h5></td>
                 <td class="attr_type">float</td>
-                <td class="attr_value">-2.92669367989e-25 ()</td>
+                <td class="attr_value">-1.46060408213e-09 ()</td>
                 <td class="attr_minmax">/</td>
                 <td class="attr_flags">['connectable', 'out']</td>
             </tr>

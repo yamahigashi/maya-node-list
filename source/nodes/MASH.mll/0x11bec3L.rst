@@ -9,7 +9,7 @@ MASH.mll - MASH_Distribute (0x11bec3L)
     
 
 :plugin:
-    D:/Program Files/Autodesk/Maya2017/plug-ins/MASH/plug-ins/MASH.mll
+    C:/Program Files/Autodesk/Maya2017/plug-ins/MASH/plug-ins/MASH.mll
 
 :id:
     0x11bec3L
