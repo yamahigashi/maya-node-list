@@ -25,7 +25,7 @@ _default - parentConstraint (0x44504152)
 
 
 
-Attributes(311)
+Attributes(316)
 --------------------------------------
 
 
@@ -107,6 +107,64 @@ Attributes(311)
 
                 <td class="attr_name" style="text-indent: 4ex;"><h5>rotateZ (rz)</h5></td>
                 <td class="attr_type">doubleAngle</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>rotationDecompositionTarget (rdta)</h5></td>
+                <td class="attr_type">double3</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>rotationDecompositionTargetX (rdtx)</h5></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>rotationDecompositionTargetY (rdty)</h5></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>rotationDecompositionTargetZ (rdtz)</h5></td>
+                <td class="attr_type">doubleLinear</td>
                 <td class="attr_value">0.0 ()</td>
                 <td class="attr_minmax">/</td>
                 <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
@@ -2348,78 +2406,6 @@ Attributes(311)
             
                 
     
-            <tr class="parent indent0 dotted">
-    
-
-                <td class="attr_name" style="text-indent: 0ex;"><h5>rotateQuaternion (rq)</h5></td>
-                <td class="attr_type">double4</td>
-                <td class="attr_value">0.0 ()</td>
-                <td class="attr_minmax">/</td>
-                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
-            </tr>
-
-
-    
-                
-    
-            <tr class="child indent1 dotted">
-    
-
-                <td class="attr_name" style="text-indent: 4ex;"><h5>rotateQuaternionW (rqw)</h5></td>
-                <td class="attr_type">double</td>
-                <td class="attr_value">0.0 ()</td>
-                <td class="attr_minmax">/</td>
-                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
-            </tr>
-
-
-    
-                
-    
-            <tr class="child indent1 dotted">
-    
-
-                <td class="attr_name" style="text-indent: 4ex;"><h5>rotateQuaternionZ (rqz)</h5></td>
-                <td class="attr_type">double</td>
-                <td class="attr_value">0.0 ()</td>
-                <td class="attr_minmax">/</td>
-                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
-            </tr>
-
-
-    
-                
-    
-            <tr class="child indent1 dotted">
-    
-
-                <td class="attr_name" style="text-indent: 4ex;"><h5>rotateQuaternionX (rqx)</h5></td>
-                <td class="attr_type">double</td>
-                <td class="attr_value">0.0 ()</td>
-                <td class="attr_minmax">/</td>
-                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
-            </tr>
-
-
-    
-                
-    
-            <tr class="child indent1 last">
-    
-
-                <td class="attr_name" style="text-indent: 4ex;"><h5>rotateQuaternionY (rqy)</h5></td>
-                <td class="attr_type">double</td>
-                <td class="attr_value">0.0 ()</td>
-                <td class="attr_minmax">/</td>
-                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
-            </tr>
-
-
-    
-
-            
-                
-    
             <tr class="indent0">
     
 
@@ -2729,6 +2715,20 @@ Attributes(311)
                 <td class="attr_type">enum</td>
                 <td class="attr_value">Standard</br>Shader</br>Custom=1000 ()</td>
                 <td class="attr_minmax">0/1000</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>useDecompositionTarget (udt)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
                 <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
             </tr>
 
@@ -4344,6 +4344,78 @@ Attributes(311)
                 <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
             </tr>
 
+
+            
+                
+    
+            <tr class="parent indent0 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>rotateQuaternion (rq)</h5></td>
+                <td class="attr_type">double4</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>rotateQuaternionW (rqw)</h5></td>
+                <td class="attr_type">double</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>rotateQuaternionZ (rqz)</h5></td>
+                <td class="attr_type">double</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>rotateQuaternionX (rqx)</h5></td>
+                <td class="attr_type">double</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>rotateQuaternionY (rqy)</h5></td>
+                <td class="attr_type">double</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+    
 
             
                 

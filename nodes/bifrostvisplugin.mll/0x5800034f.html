@@ -1,0 +1,1109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>bifrostvisplugin.mll - bifrostFoamMaterial (0x5800034f) &mdash; maya-nodes 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/custom.js"></script>
+    <link rel="top" title="maya-nodes 0.0.1 documentation" href="../../index.html" />
+    <link rel="next" title="bullet.mll - bulletRigidSet (0x58000810)" href="../bullet.mll/0x58000810.html" />
+    <link rel="prev" title="bifrostvisplugin.mll - bifrostLiquidMaterial (0x58000336)" href="0x58000336.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../bullet.mll/0x58000810.html" title="bullet.mll - bulletRigidSet (0x58000810)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="0x58000336.html" title="bifrostvisplugin.mll - bifrostLiquidMaterial (0x58000336)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">maya-nodes 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bifrostvisplugin-mll-bifrostfoammaterial-0x5800034f">
+<span id="index-0"></span><h1>bifrostvisplugin.mll - bifrostFoamMaterial (0x5800034f)<a class="headerlink" href="#bifrostvisplugin-mll-bifrostfoammaterial-0x5800034f" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">classification:</th><td class="field-body"><p class="first">drawdb/shader/surface/bifrostFoamMaterial</p>
+<p>mentalray/swatchMode/material</p>
+<p>shader/surface</p>
+<p>swatch/mentalRaySwatchGen</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">plugin:</th><td class="field-body"><p class="first">C:/Program Files/Autodesk/Maya2017/plug-ins/bifrost/plug-ins/bifrostvisplugin.mll</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">id:</th><td class="field-body"><p class="first last">0x5800034f</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="attributes-66">
+<h2>Attributes(66)<a class="headerlink" href="#attributes-66" title="Permalink to this headline">¶</a></h2>
+<table class="attribute">
+    <tbody>
+        <tr>
+            <th class="attr_name">Long name (short name)</th>
+            <th class="attr_type">Type</th>
+            <th class="attr_default">Value(Default)</th>
+            <th class="attr_minmax">Min/Max</th>
+            <th class="attr_flags">Flags</th>
+        </tr>
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>diffuseColor (dc)</h5></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseColorG (dcg)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseColorR (dcr)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseColorB (dcb)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>diffuseColorRemapInputMax (dcrmix)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">2.0 (2)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>diffuseColorRemapInputMin (dcrmim)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>reflectionColor (rlc)</h5></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>reflectionColorB (rlcb)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>reflectionColorR (rlcr)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>reflectionColorG (rlcg)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>reflectionUseDiffuseColor (rludc)</h5></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">True (1)</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>reflectionWeight (rlw)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>reflectionWeightRemapInputMax (rlwrmix)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">2.0 (2)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>reflectionWeightRemapInputMin (rlwrmim)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>scatterColor (sc)</h5></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>scatterColorG (scg)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>scatterColorR (scr)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>scatterColorB (scb)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>scatterUseDiffuseColor (sudc)</h5></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">True (1)</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>scatterWeight (sw)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>scatterWeightRemapInputMax (swrmix)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">2.0 (2)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>scatterWeightRemapInputMin (swrmim)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>transparencyColor (tc)</h5></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>transparencyColorB (tcb)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>transparencyColorG (tcg)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>transparencyColorR (tcr)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>transparencyWeight (tw)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>transparencyWeightRemapInputMax (twrmix)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">2.0 (2)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>transparencyWeightRemapInputMin (twrmim)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="6">extern visible nodes</th>
+        </tr>
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>diffuseColorRemap (dcrm)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseColorRemap_Color (dcrmcv)</h5></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><h5>diffuseColorRemap_ColorG (dcrmcvg)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><h5>diffuseColorRemap_ColorR (dcrmcvr)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 last">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><h5>diffuseColorRemap_ColorB (dcrmcvb)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseColorRemap_Position (dcrmp)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseColorRemap_Interp (dcrmi)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">None</br>Linear</br>Smooth</br>Spline (1)</td>
+            <td class="attr_minmax">0/3</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>diffuseColorRemapChannel (dcrmch)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>diffuseColorValueRemap (dcvrm)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseColorValueRemap_Position (dcvrmp)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseColorValueRemap_Interp (dcvrmi)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">None</br>Linear</br>Smooth</br>Spline (1)</td>
+            <td class="attr_minmax">0/3</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>diffuseColorValueRemap_FloatValue (dcvrmfv)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>frozen (fzn)</h5></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">False ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>outColor (oc)</h5></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>outColorB (ocb)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>outColorR (ocr)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>outColorG (ocg)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>reflectionWeightRemap (rlwrm)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>reflectionWeightRemap_FloatValue (rlwrmfv)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>reflectionWeightRemap_Position (rlwrmp)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>reflectionWeightRemap_Interp (rlwrmi)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">None</br>Linear</br>Smooth</br>Spline (1)</td>
+            <td class="attr_minmax">0/3</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>reflectionWeightRemapChannel (rlwrmch)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>scatterWeightRemap (swrm)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>scatterWeightRemap_FloatValue (swrmfv)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>scatterWeightRemap_Position (swrmp)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>scatterWeightRemap_Interp (swrmi)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">None</br>Linear</br>Smooth</br>Spline (1)</td>
+            <td class="attr_minmax">0/3</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>scatterWeightRemapChannel (swrmch)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>transparencyWeightRemap (twrm)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>transparencyWeightRemap_Interp (twrmi)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">None</br>Linear</br>Smooth</br>Spline (1)</td>
+            <td class="attr_minmax">0/3</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>transparencyWeightRemap_Position (twrmp)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>transparencyWeightRemap_FloatValue (twrmfv)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>transparencyWeightRemapChannel (twrmch)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="6">extern hidden nodes</th>
+        </tr>
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>isHistoricallyInteresting (ihi)</h5></td>
+            <td class="attr_type">byte</td>
+            <td class="attr_value">True (2)</td>
+            <td class="attr_minmax">0/255</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'hidden']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>message (msg)</h5></td>
+            <td class="attr_type">message</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'out', 'hidden']</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="6">internal nodes</th>
+        </tr>
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>binMembership (bnm)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['storable', 'hidden']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>caching (cch)</h5></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">False ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>nodeState (nds)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">Normal</br>HasNoEffect</br>Blocking</br>Waiting-Normal=8</br>Waiting-HasNoEffect</br>Waiting-Blocking ()</td>
+            <td class="attr_minmax">0/10</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+    </tbody>
+</table></div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">bifrostvisplugin.mll - bifrostFoamMaterial (0x5800034f)</a><ul>
+<li><a class="reference internal" href="#attributes-66">Attributes(66)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="0x58000336.html"
+                        title="previous chapter">bifrostvisplugin.mll - bifrostLiquidMaterial (0x58000336)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../bullet.mll/0x58000810.html"
+                        title="next chapter">bullet.mll - bulletRigidSet (0x58000810)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/nodes/bifrostvisplugin.mll/0x5800034f.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../bullet.mll/0x58000810.html" title="bullet.mll - bulletRigidSet (0x58000810)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="0x58000336.html" title="bifrostvisplugin.mll - bifrostLiquidMaterial (0x58000336)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">maya-nodes 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, yamahigashi.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

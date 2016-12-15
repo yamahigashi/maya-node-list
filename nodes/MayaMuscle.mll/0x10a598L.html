@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MayaMuscle.mll - cMuscleSmartConstraint (0x10a598L) &mdash; maya-nodes 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/custom.js"></script>
+    <link rel="top" title="maya-nodes 0.0.1 documentation" href="../../index.html" />
+    <link rel="next" title="MayaMuscle.mll - cMuscleRelative (0x10a599L)" href="0x10a599L.html" />
+    <link rel="prev" title="MayaMuscle.mll - cMuscleCreator (0x10a592L)" href="0x10a592L.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="0x10a599L.html" title="MayaMuscle.mll - cMuscleRelative (0x10a599L)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="0x10a592L.html" title="MayaMuscle.mll - cMuscleCreator (0x10a592L)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">maya-nodes 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mayamuscle-mll-cmusclesmartconstraint-0x10a598l">
+<span id="index-0"></span><h1>MayaMuscle.mll - cMuscleSmartConstraint (0x10a598L)<a class="headerlink" href="#mayamuscle-mll-cmusclesmartconstraint-0x10a598l" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">classification:</th><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">plugin:</th><td class="field-body">C:/Program Files/Autodesk/Maya2017/bin/plug-ins/MayaMuscle.mll</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">id:</th><td class="field-body">0x10a598L</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="attributes-25">
+<h2>Attributes(25)<a class="headerlink" href="#attributes-25" title="Permalink to this headline">¶</a></h2>
+<table class="attribute">
+    <tbody>
+        <tr>
+            <th class="attr_name">Long name (short name)</th>
+            <th class="attr_type">Type</th>
+            <th class="attr_default">Value(Default)</th>
+            <th class="attr_minmax">Min/Max</th>
+            <th class="attr_flags">Flags</th>
+        </tr>
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>constrainData (cdata)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>worldMatrixBBase (wmbb)</h5></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>worldMatrixA (wma)</h5></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>triggerMin (trgmin)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">0/180</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>worldMatrixB (wmb)</h5></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>biasAdjust (bisadj)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">true/2</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>bias (bis)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">true/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>worldMatrixABase (wmab)</h5></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>axis (ax)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">X-Axis</br>Y-Axis</br>Z-Axis</br>Neg X-Axis</br>Neg Y-Axis</br>Neg Z-Axis (1)</td>
+            <td class="attr_minmax">0/5</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr>
+            <th colspan="6">extern visible nodes</th>
+        </tr>
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>frozen (fzn)</h5></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">False ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>outData (odat)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>outRotate (or)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><h5>outRotateY (ory)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.57079632679 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><h5>outRotateX (orx)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 last">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><h5>outRotateZ (orz)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>outTranslate (ot)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><h5>outTranslateZ (otz)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><h5>outTranslateY (oty)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 last">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><h5>outTranslateX (otx)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>outTrigger (otrg)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr>
+            <th colspan="6">extern hidden nodes</th>
+        </tr>
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>isHistoricallyInteresting (ihi)</h5></td>
+            <td class="attr_type">byte</td>
+            <td class="attr_value">True (2)</td>
+            <td class="attr_minmax">0/255</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'hidden']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>message (msg)</h5></td>
+            <td class="attr_type">message</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'out', 'hidden']</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="6">internal nodes</th>
+        </tr>
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>binMembership (bnm)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['storable', 'hidden']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>caching (cch)</h5></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">False ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>nodeState (nds)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">Normal</br>HasNoEffect</br>Blocking</br>Waiting-Normal=8</br>Waiting-HasNoEffect</br>Waiting-Blocking ()</td>
+            <td class="attr_minmax">0/10</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+    </tbody>
+</table></div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">MayaMuscle.mll - cMuscleSmartConstraint (0x10a598L)</a><ul>
+<li><a class="reference internal" href="#attributes-25">Attributes(25)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="0x10a592L.html"
+                        title="previous chapter">MayaMuscle.mll - cMuscleCreator (0x10a592L)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="0x10a599L.html"
+                        title="next chapter">MayaMuscle.mll - cMuscleRelative (0x10a599L)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/nodes/MayaMuscle.mll/0x10a598L.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="0x10a599L.html" title="MayaMuscle.mll - cMuscleRelative (0x10a599L)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="0x10a592L.html" title="MayaMuscle.mll - cMuscleCreator (0x10a592L)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">maya-nodes 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, yamahigashi.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

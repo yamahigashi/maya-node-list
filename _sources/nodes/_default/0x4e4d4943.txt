@@ -1,6 +1,8 @@
-.. Nodes
+.. index::
+    single: makeIllustratorCurves
+    single: 0x4e4d4943
 
-Nodes:: _default - makeIllustratorCurves
+_default - makeIllustratorCurves (0x4e4d4943)
 =======================================================================================================================================
 
 :classification:
@@ -10,13 +12,22 @@ Nodes:: _default - makeIllustratorCurves
     
 
 :id:
-    1313687875
+    0x4e4d4943
+
+
+:link:
+    visit Autodesk 2016 official reference `a link`_.
+
+.. _a link: http://help.autodesk.com/cloudhelp/2016/ENU/Maya-Tech-Docs/Nodes/makeIllustratorCurves.html
+
 
 
 Attributes(16)
 --------------------------------------
 
-*extern*
+
+
+
 
 .. raw:: html
 
@@ -25,126 +36,249 @@ Attributes(16)
             <tr>
                 <th class="attr_name">Long name (short name)</th>
                 <th class="attr_type">Type</th>
-                <th class="attr_default">Default</th>
+                <th class="attr_default">Value(Default)</th>
                 <th class="attr_minmax">Min/Max</th>
                 <th class="attr_flags">Flags</th>
             </tr>
+            
+            <tr>
+                <th colspan="6">extern visible nodes</th>
+            </tr>
+            
+                
     
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>count (c)</h5></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out', 'array']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>frozen (fzn)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>illustratorFilename (ifn)</h5></td>
+                <td class="attr_type"></td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>outputCurves (oc)</h5></td>
+                <td class="attr_type"></td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out', 'array']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>position (p)</h5></td>
+                <td class="attr_type">double3</td>
+                <td class="attr_value">0.0 ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out', 'array']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>positionZ (pz)</h5></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>positionX (px)</h5></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out']</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><h5>positionY (py)</h5></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out']</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>reload (rl)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>scaleFactor (sf)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">1.0 (1)</td>
+                <td class="attr_minmax">0.0010000000474974513/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>tolerance (tl)</h5></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">0.0010000000475 (0.0010000000474974513)</td>
+                <td class="attr_minmax">0/</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+            </tr>
+
+
+            
             <tr>
-                <td><h5>count</h5>(c)</td>
-                <td>"long";</td>
-                <td>0.0 ()</td>
-                <td>/</td>
-                <td>['storable', 'writable', 'array']</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>frozen</h5>(fzn)</td>
-                <td>"bool";</td>
-                <td>False ()</td>
-                <td>0/1</td>
-                <td>[]</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>illustratorFilename</h5>(ifn)</td>
-                <td></td>
-                <td> ()</td>
-                <td>/</td>
-                <td>[]</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>isHistoricallyInteresting</h5>(ihi)</td>
-                <td>"byte";</td>
-                <td>True (2)</td>
-                <td>0/255</td>
-                <td>['hidden']</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>message</h5>(msg)</td>
-                <td>"message";</td>
-                <td> ()</td>
-                <td>/</td>
-                <td>['storable', 'writable', 'hidden']</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>outputCurves</h5>(oc)</td>
-                <td></td>
-                <td> ()</td>
-                <td>/</td>
-                <td>['storable', 'writable', 'array']</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>position</h5>(p)</td>
-                <td>"double3";</td>
-                <td>0.0 ()</td>
-                <td>/</td>
-                <td>['storable', 'writable', 'array']</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>positionX</h5>(px)</td>
-                <td>"doubleLinear"</td>
-                <td> ()</td>
-                <td>/</td>
-                <td>['storable', 'writable']</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>positionY</h5>(py)</td>
-                <td>"doubleLinear"</td>
-                <td> ()</td>
-                <td>/</td>
-                <td>['storable', 'writable']</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>positionZ</h5>(pz)</td>
-                <td>"doubleLinear"</td>
-                <td> ()</td>
-                <td>/</td>
-                <td>['storable', 'writable']</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>reload</h5>(rl)</td>
-                <td>"bool";</td>
-                <td>False ()</td>
-                <td>0/1</td>
-                <td>['storable']</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>scaleFactor</h5>(sf)</td>
-                <td>"float";</td>
-                <td>1.0 (1)</td>
-                <td>0.0010000000474974513/</td>
-                <td>[]</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
-            <tr>
-                <td><h5>tolerance</h5>(tl)</td>
-                <td>"float";</td>
-                <td>0.0010000000475 (0.0010000000474974513)</td>
-                <td>0/</td>
-                <td>[]</td>
-            </tr><tr><td class="bar" colspan="6"></td></tr>
+                <th colspan="6">extern hidden nodes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>isHistoricallyInteresting (ihi)</h5></td>
+                <td class="attr_type">byte</td>
+                <td class="attr_value">True (2)</td>
+                <td class="attr_minmax">0/255</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'hidden']</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>message (msg)</h5></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['connectable', 'out', 'hidden']</td>
+            </tr>
+
+
+            
             <tr>
                 <th colspan="6">internal nodes</th>
             </tr>
+            
+                
     
-            <tr>
-                <td><h5>binMembership</h5> (bnm)</td>
-                <td></td>
-                <td></td>
-                <td>/</td>
-                <td>['hidden']</td>
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>binMembership (bnm)</h5></td>
+                <td class="attr_type"></td>
+                <td class="attr_value"> ()</td>
+                <td class="attr_minmax">/</td>
+                <td class="attr_flags">['storable', 'hidden']</td>
             </tr>
-            <tr>
-                <td><h5>caching</h5> (cch)</td>
-                <td>"bool";</td>
-                <td></td>
-                <td>0/1</td>
-                <td>[]</td>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>caching (cch)</h5></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">False ()</td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
             </tr>
-            <tr>
-                <td><h5>nodeState</h5> (nds)</td>
-                <td>"enum";</td>
-                <td></td>
-                <td>0/10</td>
-                <td>[]</td>
+
+
+            
+                
+    
+            <tr class="indent0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><h5>nodeState (nds)</h5></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">Normal</br>HasNoEffect</br>Blocking</br>Waiting-Normal=8</br>Waiting-HasNoEffect</br>Waiting-Blocking ()</td>
+                <td class="attr_minmax">0/10</td>
+                <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
             </tr>
+
+
+            
         </tbody>
     </table>
+    

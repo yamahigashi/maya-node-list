@@ -9,7 +9,7 @@ MASH.mll - MASH_Blend (0x11be3dL)
     
 
 :plugin:
-    D:/Program Files/Autodesk/Maya2017/plug-ins/MASH/plug-ins/MASH.mll
+    C:/Program Files/Autodesk/Maya2017/plug-ins/MASH/plug-ins/MASH.mll
 
 :id:
     0x11be3dL

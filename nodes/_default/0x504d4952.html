@@ -67,8 +67,8 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="attributes-27">
-<h2>Attributes(27)<a class="headerlink" href="#attributes-27" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="attributes-51">
+<h2>Attributes(51)<a class="headerlink" href="#attributes-51" title="Permalink to this headline">¶</a></h2>
 <table class="attribute">
     <tbody>
         <tr>
@@ -77,6 +77,252 @@
             <th class="attr_default">Value(Default)</th>
             <th class="attr_minmax">Min/Max</th>
             <th class="attr_flags">Flags</th>
+        </tr>
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>axis (a)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">X</br>Y</br>Z ()</td>
+            <td class="attr_minmax">0/2</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>axisDirection (ad)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">+</br>- (1)</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>cutMesh (cm)</h5></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">False ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>flipUVs (fuv)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">Off</br>Local U</br>Local V</br>World U</br>World V ()</td>
+            <td class="attr_minmax">0/4</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>mergeMode (mm)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">Merge border vertices=1</br>Bridge border edges</br>Do not merge borders (1)</td>
+            <td class="attr_minmax">1/3</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>mergeThreshold (mt)</h5></td>
+            <td class="attr_type">doubleLinear</td>
+            <td class="attr_value">0.001 (0.001)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>mirrorAxis (ma)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">Bounding box</br>Object</br>World (2)</td>
+            <td class="attr_minmax">0/2</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>mirrorPlaneCenter (pc)</h5></td>
+            <td class="attr_type">double3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>mirrorPlaneCenterX (pcx)</h5></td>
+            <td class="attr_type">doubleLinear</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>mirrorPlaneCenterY (pcy)</h5></td>
+            <td class="attr_type">doubleLinear</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>mirrorPlaneCenterZ (pcz)</h5></td>
+            <td class="attr_type">doubleLinear</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>mirrorPlaneRotate (ro)</h5></td>
+            <td class="attr_type">double3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>mirrorPlaneRotateZ (rz)</h5></td>
+            <td class="attr_type">doubleAngle</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>mirrorPlaneRotateX (rx)</h5></td>
+            <td class="attr_type">doubleAngle</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>mirrorPlaneRotateY (ry)</h5></td>
+            <td class="attr_type">doubleAngle</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>mirrorPosition (mps)</h5></td>
+            <td class="attr_type">floatLinear</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>smoothingAngle (sa)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">30.0 (30)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="6">extern visible nodes</th>
         </tr>
 
 
@@ -98,10 +344,10 @@
         <tr class="indent0">
 
 
-            <td class="attr_name" style="text-indent: 0ex;"><h5>mergeMode (mm)</h5></td>
-            <td class="attr_type">enum</td>
-            <td class="attr_value">Dont Merge Vertices</br>Merge Border Vertices</br>Connect Border Edges ()</td>
-            <td class="attr_minmax">0/2</td>
+            <td class="attr_name" style="text-indent: 0ex;"><h5>firstNewFace (fnf)</h5></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
             <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
         </tr>
 
@@ -112,11 +358,81 @@
         <tr class="indent0">
 
 
-            <td class="attr_name" style="text-indent: 0ex;"><h5>mergeThreshold (mt)</h5></td>
-            <td class="attr_type">doubleLinear</td>
-            <td class="attr_value">0.001 (0.001)</td>
-            <td class="attr_minmax">0/</td>
+            <td class="attr_name" style="text-indent: 0ex;"><h5>frozen (fzn)</h5></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">False ()</td>
+            <td class="attr_minmax">0/1</td>
             <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>inputComponents (ics)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>keepVertexIDs (kv)</h5></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">True (1)</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>lastNewFace (lnf)</h5></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>mergeThresholdType (mtt)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">Automatic</br>Custom ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>output (out)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'out']</td>
         </tr>
 
 
@@ -179,52 +495,6 @@
 
 
 
-        <tr>
-            <th colspan="6">extern visible nodes</th>
-        </tr>
-
-
-
-        <tr class="indent0">
-
-
-            <td class="attr_name" style="text-indent: 0ex;"><h5>frozen (fzn)</h5></td>
-            <td class="attr_type">bool</td>
-            <td class="attr_value">False ()</td>
-            <td class="attr_minmax">0/1</td>
-            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
-        </tr>
-
-
-
-
-
-        <tr class="indent0">
-
-
-            <td class="attr_name" style="text-indent: 0ex;"><h5>inputComponents (ics)</h5></td>
-            <td class="attr_type"></td>
-            <td class="attr_value"> ()</td>
-            <td class="attr_minmax">/</td>
-            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
-        </tr>
-
-
-
-
-
-        <tr class="indent0">
-
-
-            <td class="attr_name" style="text-indent: 0ex;"><h5>output (out)</h5></td>
-            <td class="attr_type"></td>
-            <td class="attr_value"> ()</td>
-            <td class="attr_minmax">/</td>
-            <td class="attr_flags">['connectable', 'out']</td>
-        </tr>
-
-
-
 
 
         <tr class="indent0">
@@ -256,6 +526,20 @@
         <tr>
             <th colspan="6">extern hidden nodes</th>
         </tr>
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>compId (cid)</h5></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'out', 'hidden']</td>
+        </tr>
+
+
 
 
 
@@ -338,6 +622,64 @@
             <td class="attr_minmax">/</td>
             <td class="attr_flags">['connectable', 'out', 'hidden']</td>
         </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>scalePivot (sp)</h5></td>
+            <td class="attr_type">double3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'hidden']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>scalePivotY (spy)</h5></td>
+            <td class="attr_type">doubleLinear</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>scalePivotX (spx)</h5></td>
+            <td class="attr_type">doubleLinear</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>scalePivotZ (spz)</h5></td>
+            <td class="attr_type">doubleLinear</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
 
 
 
@@ -484,7 +826,7 @@
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">_default - polyMirror (0x504d4952)</a><ul>
-<li><a class="reference internal" href="#attributes-27">Attributes(27)</a></li>
+<li><a class="reference internal" href="#attributes-51">Attributes(51)</a></li>
 </ul>
 </li>
 </ul>
@@ -510,9 +852,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -536,7 +875,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2016, yamahigashi.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>
