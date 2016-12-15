@@ -76,7 +76,7 @@ Attributes({{ node.attributeCount }})
                 <th class="attr_minmax">Min/Max</th>
                 <th class="attr_flags">Flags</th>
             </tr>
-            {% for k, v in apper_in_cbox_attrs.iteritems() %}
+            {% for k, v in appear_in_cbox_attrs.iteritems() %}
                 {{ attr(k, v) }}
             {% endfor %}
             <tr>
