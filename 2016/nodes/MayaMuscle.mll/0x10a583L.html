@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MayaMuscle.mll - cMuscleStretch (0x10a583L) &#8212; maya-nodes 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=2bf1fcf8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fa5d2231" />
+    
+    <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/custom.js?v=6c73afcf"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MayaMuscle.mll - cMuscleSplineDeformer (0x10a58aL)" href="0x10a58aL.html" />
+    <link rel="prev" title="MayaMuscle.mll - cMuscleSystem (0x10a581L)" href="0x10a581L.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="0x10a58aL.html" title="MayaMuscle.mll - cMuscleSplineDeformer (0x10a58aL)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="0x10a581L.html" title="MayaMuscle.mll - cMuscleSystem (0x10a581L)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">maya-nodes 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MayaMuscle.mll - cMuscleStretch (0x10a583L)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mayamuscle-mll-cmusclestretch-0x10a583l">
+<span id="index-0"></span><h1>MayaMuscle.mll - cMuscleStretch (0x10a583L)<a class="headerlink" href="#mayamuscle-mll-cmusclestretch-0x10a583l" title="Link to this heading">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">classification<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">plugin<span class="colon">:</span></dt>
+<dd class="field-even"><p>C:/Program Files/Autodesk/Maya2017/bin/plug-ins/MayaMuscle.mll</p>
+</dd>
+<dt class="field-odd">id<span class="colon">:</span></dt>
+<dd class="field-odd"><p>0x10a583L</p>
+</dd>
+</dl>
+<section id="attributes-73">
+<h2>Attributes(73)<a class="headerlink" href="#attributes-73" title="Link to this heading">¶</a></h2>
+<table class="attribute">
+    <tbody>
+        <tr>
+            <th class="attr_name">Long name (short name)</th>
+            <th class="attr_type">Type</th>
+            <th class="attr_default">Value(Default)</th>
+            <th class="attr_minmax">Min/Max</th>
+            <th class="attr_flags">Flags</th>
+        </tr>
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>JIGGLE (JIG)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">- ()</td>
+            <td class="attr_minmax">0/0</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>SCALING (SCL)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">- ()</td>
+            <td class="attr_minmax">0/0</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>WEIGHTING (WTNG)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">- ()</td>
+            <td class="attr_minmax">0/0</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>cycleEnd (ce)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">8.0 (8)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>cycleMid (cm)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">8.0 (8)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>cycleStart (cs)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">8.0 (8)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>dampenOnSquash (dmpsq)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.75 (0.75)</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>dampenOnStretch (dmpst)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.75 (0.75)</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>envelope (en)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">true/2</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>jiggleEnd (je)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>jiggleMid (jm)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>jiggleStart (js)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>manualSquish (mans)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">true/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>maxSquash (msq)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.5 (0.5)</td>
+            <td class="attr_minmax">1e-006/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>maxStretch (mst)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">2.0 (2)</td>
+            <td class="attr_minmax">1/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>resetFrame (rf)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">true/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>restEnd (re)</h5></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">24.0 (24)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>restMid (rm)</h5></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">24.0 (24)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>restStart (rs)</h5></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">24.0 (24)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>squashEnd (sq3)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>squashMid (sq2)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.5 (1.5)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>squashStart (sq1)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>stretchEnd (st3)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>stretchMid (st2)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.5 (0.5)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>stretchStart (st1)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>weightEnd (wte)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>weightList (wl)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>weights (w)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array', 'keyable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>weightMid (wtm)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>weightStart (wts)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">0/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>xFactor (xfc)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>zFactor (zfc)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">1.0 (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'keyable']</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="6">extern visible nodes</th>
+        </tr>
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>forceEnd (fed)</h5></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>forceEndY (fedy)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>forceEndX (fedx)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>forceEndZ (fedz)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>forceMid (fmd)</h5></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>forceMidZ (fmdz)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>forceMidX (fmdx)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>forceMidY (fmdy)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>forceStart (fst)</h5></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>forceStartZ (fstz)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>forceStartX (fstx)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>forceStartY (fsty)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>frozen (fzn)</h5></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">False ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>input (ip)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>inputGeometry (ig)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>groupId (gi)</h5></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>inTime (it)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>innerFalloffEnd (ife)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>innerFalloffMid (ifm)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>innerFalloffStart (ifs)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>lengthCalc (len)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>map64BitIndices (map)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>outerFalloffEnd (ofe)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.9 (0.9)</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>outerFalloffMid (ofm)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.9 (0.9)</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>outerFalloffStart (ofs)</h5></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">0.9 (0.9)</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>outputGeometry (og)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'out', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>worldMatrixEnd (wme)</h5></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>worldMatrixEndBase (wmeb)</h5></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>worldMatrixMid (wmm)</h5></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>worldMatrixMidBase (wmmb)</h5></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>worldMatrixStart (wms)</h5></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>worldMatrixStartBase (wmsb)</h5></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="6">extern hidden nodes</th>
+        </tr>
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>function (f)</h5></td>
+            <td class="attr_type">long3</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'hidden']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>fchild3 (f3)</h5></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'hidden']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>fchild2 (f2)</h5></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'hidden']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>fchild1 (f1)</h5></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">0.0 ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'hidden']</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>isHistoricallyInteresting (ihi)</h5></td>
+            <td class="attr_type">byte</td>
+            <td class="attr_value">True (2)</td>
+            <td class="attr_minmax">0/255</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'hidden']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>message (msg)</h5></td>
+            <td class="attr_type">message</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'out', 'hidden']</td>
+        </tr>
+
+
+
+        <tr>
+            <th colspan="6">internal nodes</th>
+        </tr>
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>binMembership (bnm)</h5></td>
+            <td class="attr_type"></td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['storable', 'hidden']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>caching (cch)</h5></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">False ()</td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>nodeState (nds)</h5></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">Normal</br>HasNoEffect</br>Blocking</br>Waiting-Normal=8</br>Waiting-HasNoEffect</br>Waiting-Blocking ()</td>
+            <td class="attr_minmax">0/10</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable']</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><h5>weightList (wl)</h5></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value"> ()</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array']</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><h5>weights (w)</h5></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value"> (1)</td>
+            <td class="attr_minmax">/</td>
+            <td class="attr_flags">['connectable', 'in', 'out', 'storable', 'array', 'keyable']</td>
+        </tr>
+
+
+
+
+
+    </tbody>
+</table></section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">MayaMuscle.mll - cMuscleStretch (0x10a583L)</a><ul>
+<li><a class="reference internal" href="#attributes-73">Attributes(73)</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="0x10a581L.html"
+                          title="previous chapter">MayaMuscle.mll - cMuscleSystem (0x10a581L)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="0x10a58aL.html"
+                          title="next chapter">MayaMuscle.mll - cMuscleSplineDeformer (0x10a58aL)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/nodes/MayaMuscle.mll/0x10a583L.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="0x10a58aL.html" title="MayaMuscle.mll - cMuscleSplineDeformer (0x10a58aL)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="0x10a581L.html" title="MayaMuscle.mll - cMuscleSystem (0x10a581L)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">maya-nodes 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MayaMuscle.mll - cMuscleStretch (0x10a583L)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2016, yamahigashi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

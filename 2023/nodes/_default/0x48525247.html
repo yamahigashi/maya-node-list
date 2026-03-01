@@ -1,0 +1,2282 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>_default - hardwareRenderingGlobals (0x48525247) &#8212; maya-nodes 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=2bf1fcf8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fa5d2231" />
+    
+    <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/custom.js?v=6c73afcf"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="_default - hairSystem (0x48535953)" href="0x48535953.html" />
+    <link rel="prev" title="_default - hairConstraint (0x4850494e)" href="0x4850494e.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="0x48535953.html" title="_default - hairSystem (0x48535953)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="0x4850494e.html" title="_default - hairConstraint (0x4850494e)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">maya-nodes 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">_default - hardwareRenderingGlobals (0x48525247)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="default-hardwarerenderingglobals-0x48525247">
+<span id="index-0"></span><h1>_default - hardwareRenderingGlobals (0x48525247)<a class="headerlink" href="#default-hardwarerenderingglobals-0x48525247" title="Link to this heading">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">classification<span class="colon">:</span></dt>
+<dd class="field-odd"><p>auxiliary/camera</p>
+</dd>
+<dt class="field-even">plugin<span class="colon">:</span></dt>
+<dd class="field-even"><p>(built-in)</p>
+</dd>
+<dt class="field-odd">id<span class="colon">:</span></dt>
+<dd class="field-odd"><p>0x48525247</p>
+</dd>
+<dt class="field-even">link<span class="colon">:</span></dt>
+<dd class="field-even"><p>visit Autodesk Maya 2023 official reference <a class="reference external" href="https://help.autodesk.com/cloudhelp/2023/ENU/Maya-Tech-Docs/Nodes/hardwareRenderingGlobals.html">a link</a>.</p>
+</dd>
+</dl>
+<section id="attributes-99">
+<h2>Attributes (99)<a class="headerlink" href="#attributes-99" title="Link to this heading">¶</a></h2>
+<table class="attribute">
+    <tbody>
+        <tr>
+            <th class="attr_name">Long name (short name)</th>
+            <th class="attr_type">Type</th>
+            <th class="attr_default">Value</th>
+            <th class="attr_minmax">Min/Max</th>
+            <th class="attr_flags">Flags</th>
+        </tr>
+
+
+        <tr>
+            <th colspan="5">external visible attributes</th>
+        </tr>
+
+
+
+        <tr class="indent0" data-attr-name="alphaCutPrepass">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">alphaCutPrepass (acpp)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="batchRenderControls">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">batchRenderControls (brc)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="lightingMode">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">lightingMode (lm)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        Default (0)
+
+                    </li>
+
+                    <li class="attr_enum_item default">
+                        All (1)
+
+                        <span class="enum_default">(default)</span>
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        None (2)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Active (3)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Full Ambient (4)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/4</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="objectTypeFilterNameArray">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">objectTypeFilterNameArray (otfna)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="objectTypeFilterValueArray">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">objectTypeFilterValueArray (otfva)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="pluginObjectTypeFilterNameArray">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">pluginObjectTypeFilterNameArray (potfna)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="pluginObjectTypeFilterValueArray">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">pluginObjectTypeFilterValueArray (potfva)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="renderMode">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">renderMode (rm)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">4</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        Wire (0)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Shaded (1)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Wire On Shaded (2)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Default Material (3)
+
+                    </li>
+
+                    <li class="attr_enum_item default">
+                        Shaded And Textured (4)
+
+                        <span class="enum_default">(default)</span>
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Wire On Shaded And Textured (5)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Bounding Box (6)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/6</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0" data-attr-name="bloomAmount">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">bloomAmount (blat)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="bloomEnable">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">bloomEnable (blen)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="bloomFilter">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">bloomFilter (blfl)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="bloomFilterAux">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">bloomFilterAux (blfa)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="bloomFilterRadius">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">bloomFilterRadius (blfr)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="bloomThreshold">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">bloomThreshold (blth)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="bumpBakeResolution">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">bumpBakeResolution (bbr)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">64</div>
+
+
+            </td>
+            <td class="attr_minmax">4/8192</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="colorBakeResolution">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">colorBakeResolution (cbr)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">64</div>
+
+
+            </td>
+            <td class="attr_minmax">4/8192</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="compressSharedVertexData">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">compressSharedVertexData (csvd)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="consolidateWorld">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">consolidateWorld (cons)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="enableTextureMaxRes">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">enableTextureMaxRes (etmr)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="floatingPointRTEnable">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">floatingPointRTEnable (fprt)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="floatingPointRTFormat">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">floatingPointRTFormat (rtfm)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item default">
+                        R32G32B32A32_FLOAT (1)
+
+                        <span class="enum_default">(default)</span>
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        R32G32B32_FLOAT (2)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        R16G16B16A16_FLOAT (3)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">1/3</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="frozen">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozen (fzn)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="frozenAffected">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozenAffected (fza)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, extension, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="gammaCorrectionEnable">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">gammaCorrectionEnable (gamm)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="gammaValue">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">gammaValue (gmmv)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">2.2000000476837158</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="holdOutDetailMode">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">holdOutDetailMode (hodm)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item default">
+                        Per Object Hold-Out (1)
+
+                        <span class="enum_default">(default)</span>
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        All Object Hold-Out (2)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">1/2</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="holdOutMode">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">holdOutMode (hom)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="hwFogAlpha">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">hwFogAlpha (hfa)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="hwFogColor">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">hwFogColor (hfc)</span></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="hwFogColorB">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">hwFogColorB (hfcb)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">0.5</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="hwFogColorG">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">hwFogColorG (hfcg)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">0.5</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="hwFogColorR">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">hwFogColorR (hfcr)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">0.5</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0" data-attr-name="hwFogDensity">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">hwFogDensity (hfd)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">0.10000000149011612</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="hwFogEnd">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">hwFogEnd (hfe)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">100</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="hwFogFalloff">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">hwFogFalloff (hff)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        Linear (0)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Exponential (1)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Exponential squared (2)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/2</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="hwFogStart">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">hwFogStart (hfs)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="hwInstancing">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">hwInstancing (hwi)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="lineAAEnable">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">lineAAEnable (laa)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="maxHardwareLights">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">maxHardwareLights (mhl)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">8</div>
+
+
+            </td>
+            <td class="attr_minmax">1/-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="motionBlurAtlasSize">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurAtlasSize (mbas)</span></td>
+            <td class="attr_type">long2</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="motionBlurAtlasSizeX">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">motionBlurAtlasSizeX (mbasx)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">8</div>
+
+
+            </td>
+            <td class="attr_minmax">1/32</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="motionBlurAtlasSizeY">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">motionBlurAtlasSizeY (mbasy)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">4</div>
+
+
+            </td>
+            <td class="attr_minmax">1/32</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0" data-attr-name="motionBlurCurved">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurCurved (mbc)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="motionBlurFadeAmount">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurFadeAmount (mbfa)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">0.5</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="motionBlurFadeEmphasis">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurFadeEmphasis (mbfe)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">true/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="motionBlurFadeFilter">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurFadeFilter (mbff)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="motionBlurFadeTint">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurFadeTint (mbft)</span></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="motionBlurFadeTintB">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">motionBlurFadeTintB (mbftb)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="motionBlurFadeTintG">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">motionBlurFadeTintG (mbftg)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="motionBlurFadeTintR">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">motionBlurFadeTintR (mbftr)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0" data-attr-name="motionBlurFadeTintA">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurFadeTintA (mbfta)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="motionBlurMultiframeChartSize">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurMultiframeChartSize (mbcs)</span></td>
+            <td class="attr_type">long2</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="motionBlurMultiframeChartSizeX">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">motionBlurMultiframeChartSizeX (mbcsx)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">256</div>
+
+
+            </td>
+            <td class="attr_minmax">1/4096</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="motionBlurMultiframeChartSizeY">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">motionBlurMultiframeChartSizeY (mbcsy)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">256</div>
+
+
+            </td>
+            <td class="attr_minmax">1/4096</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0" data-attr-name="motionBlurMultiframeEnable">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurMultiframeEnable (mbme)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="motionBlurSampleCount">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurSampleCount (mbsc)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">8</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        4 (4)
+
+                    </li>
+
+                    <li class="attr_enum_item default">
+                        8 (8)
+
+                        <span class="enum_default">(default)</span>
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        16 (16)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        32 (32)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">4/32</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="motionBlurShutterOpenFraction">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurShutterOpenFraction (mbsof)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">0.20000000298023224</div>
+
+
+            </td>
+            <td class="attr_minmax">0.0099999997764825821/2</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="motionBlurType">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurType (mbt)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        Transform (0)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/0</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="multiSampleCount">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">multiSampleCount (aasc)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">8</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        1 (1)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        2 (2)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        4 (4)
+
+                    </li>
+
+                    <li class="attr_enum_item default">
+                        8 (8)
+
+                        <span class="enum_default">(default)</span>
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        16 (16)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">1/16</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="multiSampleEnable">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">multiSampleEnable (msaa)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="multiSampleQuality">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">multiSampleQuality (aasq)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        0 (0)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/0</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="renderOverrideName">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">renderOverrideName (on)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="singleSidedLighting">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">singleSidedLighting (sslt)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="ssaoAmount">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">ssaoAmount (aoam)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/3</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="ssaoEnable">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">ssaoEnable (aoon)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="ssaoFilter">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">ssaoFilter (aoft)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="ssaoFilterRadius">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">ssaoFilterRadius (aofr)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">16</div>
+
+
+            </td>
+            <td class="attr_minmax">1/32</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="ssaoRadius">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">ssaoRadius (aora)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">16</div>
+
+
+            </td>
+            <td class="attr_minmax">1/64</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="ssaoSamples">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">ssaoSamples (aosm)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">16</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        8 (8)
+
+                    </li>
+
+                    <li class="attr_enum_item default">
+                        16 (16)
+
+                        <span class="enum_default">(default)</span>
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        32 (32)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">8/32</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="textureAutoMaxResolution">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">textureAutoMaxResolution (tamr)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">2048</div>
+
+
+            </td>
+            <td class="attr_minmax">32/16384</td>
+            <td class="attr_flags">-</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="textureMaxResMode">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">textureMaxResMode (tmrm)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        Automatic (0)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Custom (1)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="textureMaxResolution">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">textureMaxResolution (tmr)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">2048</div>
+
+
+            </td>
+            <td class="attr_minmax">32/16384</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="transparencyAlgorithm">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">transparencyAlgorithm (ta)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        Simple (0)
+
+                    </li>
+
+                    <li class="attr_enum_item default">
+                        Object Sorting (1)
+
+                        <span class="enum_default">(default)</span>
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Weighted Average (2)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Depth Peeling (3)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Alpha Cut (5)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/5</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="transparencyQuality">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">transparencyQuality (tq)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">0.33000001311302185</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="transparentShadow">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">transparentShadow (ts)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="xrayJointDisplay">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">xrayJointDisplay (jxr)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="xrayMode">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">xrayMode (xry)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr>
+            <th colspan="5">external hidden attributes</th>
+        </tr>
+
+
+
+        <tr class="indent0" data-attr-name="currentRendererName">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">currentRendererName (cur)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, hidden, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="customUVBorderColor">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">customUVBorderColor (uvbc)</span></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">hidden</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="customUVBorderColorB">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">customUVBorderColorB (uvbcb)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">true</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="customUVBorderColorG">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">customUVBorderColorG (uvbcg)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">true</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="customUVBorderColorR">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">customUVBorderColorR (uvbcr)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">true</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0" data-attr-name="hwFogEnable">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">hwFogEnable (hfon)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, hidden, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="isCustomUVBorderColor">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">isCustomUVBorderColor (isuvbc)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">hidden</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="isHistoricallyInteresting">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">isHistoricallyInteresting (ihi)</span></td>
+            <td class="attr_type">byte</td>
+            <td class="attr_value">
+                <div class="attr_current">2</div>
+
+
+            </td>
+            <td class="attr_minmax">0/255</td>
+            <td class="attr_flags">connectable, hidden, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="message">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">message (msg)</span></td>
+            <td class="attr_type">message</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, hidden, out</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="quadDrawAlwaysOnTop">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">quadDrawAlwaysOnTop (qdaot)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">hidden</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="quadDrawOverrideColor">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">quadDrawOverrideColor (qdoc)</span></td>
+            <td class="attr_type">float3</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">hidden</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="quadDrawOverrideColorB">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">quadDrawOverrideColorB (qdocb)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">true</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="quadDrawOverrideColorG">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">quadDrawOverrideColorG (qdocg)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">true</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="quadDrawOverrideColorR">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">quadDrawOverrideColorR (qdocr)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">true</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0" data-attr-name="quadDrawOverrideTransparency">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">quadDrawOverrideTransparency (qdot)</span></td>
+            <td class="attr_type">float</td>
+            <td class="attr_value">
+                <div class="attr_current">true</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">hidden</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="renderDepthOfField">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">renderDepthOfField (adof)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, hidden, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="useMaximumHardwareLights">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">useMaximumHardwareLights (uml)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, hidden, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="vertexAnimationCache">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">vertexAnimationCache (vac)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        Disable (0)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        System (1)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Hardware (2)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/2</td>
+            <td class="attr_flags">connectable, hidden, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr>
+            <th colspan="5">internal attributes</th>
+        </tr>
+
+
+
+        <tr class="indent0" data-attr-name="binMembership">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">binMembership (bnm)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">hidden, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="caching">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">caching (cch)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="motionBlurEnable">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurEnable (mbe)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="nodeState">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">nodeState (nds)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        Normal (0)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        HasNoEffect (1)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Blocking (2)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Waiting-Normal (8)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Waiting-HasNoEffect (9)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Waiting-Blocking (10)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/10</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+    </tbody>
+</table></section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">_default - hardwareRenderingGlobals (0x48525247)</a><ul>
+<li><a class="reference internal" href="#attributes-99">Attributes (99)</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="0x4850494e.html"
+                          title="previous chapter">_default - hairConstraint (0x4850494e)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="0x48535953.html"
+                          title="next chapter">_default - hairSystem (0x48535953)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/nodes/_default/0x48525247.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="0x48535953.html" title="_default - hairSystem (0x48535953)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="0x4850494e.html" title="_default - hairConstraint (0x4850494e)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">maya-nodes 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">_default - hardwareRenderingGlobals (0x48525247)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2016, yamahigashi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

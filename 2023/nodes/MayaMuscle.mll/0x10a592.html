@@ -1,0 +1,2385 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MayaMuscle.mll - cMuscleCreator (0x10a592) &#8212; maya-nodes 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=2bf1fcf8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fa5d2231" />
+    
+    <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/custom.js?v=6c73afcf"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MayaMuscle.mll - cMuscleDebug (0x10a594)" href="0x10a594.html" />
+    <link rel="prev" title="MayaMuscle.mll - cMuscleMultiCollide (0x10a591)" href="0x10a591.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="0x10a594.html" title="MayaMuscle.mll - cMuscleDebug (0x10a594)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="0x10a591.html" title="MayaMuscle.mll - cMuscleMultiCollide (0x10a591)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">maya-nodes 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MayaMuscle.mll - cMuscleCreator (0x10a592)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mayamuscle-mll-cmusclecreator-0x10a592">
+<span id="index-0"></span><h1>MayaMuscle.mll - cMuscleCreator (0x10a592)<a class="headerlink" href="#mayamuscle-mll-cmusclecreator-0x10a592" title="Link to this heading">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">classification<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(none)</p>
+</dd>
+<dt class="field-even">plugin<span class="colon">:</span></dt>
+<dd class="field-even"><p>C:/Program Files/Autodesk/Maya2023/bin/plug-ins/MayaMuscle.mll</p>
+</dd>
+<dt class="field-odd">id<span class="colon">:</span></dt>
+<dd class="field-odd"><p>0x10a592</p>
+</dd>
+</dl>
+<section id="attributes-113">
+<h2>Attributes (113)<a class="headerlink" href="#attributes-113" title="Link to this heading">¶</a></h2>
+<table class="attribute">
+    <tbody>
+        <tr>
+            <th class="attr_name">Long name (short name)</th>
+            <th class="attr_type">Type</th>
+            <th class="attr_default">Value</th>
+            <th class="attr_minmax">Min/Max</th>
+            <th class="attr_flags">Flags</th>
+        </tr>
+
+        <tr>
+            <th colspan="5">channel box</th>
+        </tr>
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="nurbsData">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">nurbsData (ndata)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="JIGGLE">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">JIGGLE (lbljig)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        - (0)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/0</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="MODEL">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">MODEL (lblmdl)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        - (0)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/0</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="SQUASH_STRETCH">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">SQUASH_STRETCH (lblsqst)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        - (0)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/0</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="animCurveOutputSq">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">animCurveOutputSq (acoutsq)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="animCurveOutputSt">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">animCurveOutputSt (acoutst)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="autoRotate">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">autoRotate (arot)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="autoWiden">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">autoWiden (awid)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="basedOn">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">basedOn (sqstbo)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">2</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        length (0)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        pose (1)
+
+                    </li>
+
+                    <li class="attr_enum_item default">
+                        pose or length (2)
+
+                        <span class="enum_default">(default)</span>
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/2</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="crossSections">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">crossSections (csec)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">7</div>
+
+
+            </td>
+            <td class="attr_minmax">1/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="dampenOnSquash">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">dampenOnSquash (dmpsq)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">0.75</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="dampenOnStretch">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">dampenOnStretch (dmpst)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">0.75</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="defWidthEnd">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">defWidthEnd (defwided)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="defWidthStart">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">defWidthStart (defwidst)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="endParent">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">endParent (epm)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="endPointA">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">endPointA (epa)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="endPointB">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">endPointB (epb)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="flatCrossSections">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">flatCrossSections (fltcrs)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="gravityCycle">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">gravityCycle (gravcyc)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="gravityJiggle">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">gravityJiggle (gravjig)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="gravityStrength">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">gravityStrength (gravstr)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="gravityX">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">gravityX (gravx)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="gravityY">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">gravityY (gravy)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">true</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="gravityZ">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">gravityZ (gravz)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="interpMode">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">interpMode (intmod)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        linear (0)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        smooth-step (1)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        animCurve (2)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/2</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="lenDefault">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">lenDefault (lendef)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="lenSquash">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">lenSquash (lensq)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">0.5</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="lenStretch">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">lenStretch (lenst)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">2</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="linearAutoSquash">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">linearAutoSquash (lnatsq)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="linearAutoStretch">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">linearAutoStretch (lnatst)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="manualSqSt">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">manualSqSt (msqst)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">true/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="msgAnimCurveSq">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">msgAnimCurveSq (msgacsq)</span></td>
+            <td class="attr_type">message</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="msgAnimCurveSt">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">msgAnimCurveSt (msgacst)</span></td>
+            <td class="attr_type">message</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="poseReadAxis">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">poseReadAxis (psredax)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        X-Axis (0)
+
+                    </li>
+
+                    <li class="attr_enum_item default">
+                        Y-Axis (1)
+
+                        <span class="enum_default">(default)</span>
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Z-Axis (2)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/2</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="poseUseTwist">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">poseUseTwist (psustw)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="poseUses">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">poseUses (pous)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">2</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        angle (0)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        position (1)
+
+                    </li>
+
+                    <li class="attr_enum_item default">
+                        angle and position (2)
+
+                        <span class="enum_default">(default)</span>
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/2</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="resetFrame">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">resetFrame (rf)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">true/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="showControls">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">showControls (shcont)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="showRestMovers">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">showRestMovers (shrsm)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="showSquashMovers">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">showSquashMovers (shsqm)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="showStretchMovers">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">showStretchMovers (shstm)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="sides">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">sides (sid)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">8</div>
+
+
+            </td>
+            <td class="attr_minmax">3/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="startParent">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">startParent (spm)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="startPointA">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">startPointA (spa)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="startPointB">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">startPointB (spb)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="tolerance">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">tolerance (tol)</span></td>
+            <td class="attr_type">long</td>
+            <td class="attr_value">
+                <div class="attr_current">24</div>
+
+
+            </td>
+            <td class="attr_minmax">2/-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="upAxis">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">upAxis (uax)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        X-Axis (0)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Z-Axis (1)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="userScale">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">userScale (usc)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, keyable, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr>
+            <th colspan="5">external visible attributes</th>
+        </tr>
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="attachData">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">attachData (atdata)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">array, connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="attachMatrix">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">attachMatrix (amat)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="attachMatrixSq">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">attachMatrixSq (amatsq)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="attachMatrixSt">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">attachMatrixSt (amatst)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="gravityMult">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">gravityMult (grvmul)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="controlData">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">controlData (cdata)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">array, connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="curveRest">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">curveRest (crvrs)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="curveSq">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">curveSq (crvsq)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="curveSt">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">curveSt (crvst)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="cycle">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">cycle (cyc)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">10</div>
+
+
+            </td>
+            <td class="attr_minmax">1/-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="insertMatrix">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">insertMatrix (imat)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="jiggle">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">jiggle (jig)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="jiggleImpact">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">jiggleImpact (jigimp)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="jiggleImpactStart">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">jiggleImpactStart (jigimps)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">0.1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="jiggleImpactStop">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">jiggleImpactStop (jigimpp)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">0.1</div>
+
+
+            </td>
+            <td class="attr_minmax">0/-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="jiggleX">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">jiggleX (jigx)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="jiggleY">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">jiggleY (jigy)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="jiggleZ">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">jiggleZ (jigz)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">1</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="rest">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">rest (rst)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">24</div>
+
+
+            </td>
+            <td class="attr_minmax">1/-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="jiggleFrame">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">jiggleFrame (jfrm)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">array, connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="force">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">force (frc)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">array, connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted" data-attr-name="forceX">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">forceX (fx)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted" data-attr-name="forceY">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">forceY (fy)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 last" data-attr-name="forceZ">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">forceZ (fz)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+
+
+        <tr class="indent0" data-attr-name="frozen">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozen (fzn)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="frozenAffected">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozenAffected (fza)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, extension, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="inTime">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">inTime (it)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="linearData">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">linearData (ldata)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">array, connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="linearMatrix">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">linearMatrix (lmat)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="uValue">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">uValue (uval)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="outAttachData">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outAttachData (oadat)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">array, connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="outAttachRotate">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outAttachRotate (oar)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted" data-attr-name="outAttachRotateX">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outAttachRotateX (oarx)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted" data-attr-name="outAttachRotateY">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outAttachRotateY (oary)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 last" data-attr-name="outAttachRotateZ">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outAttachRotateZ (oarz)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="outAttachTranslate">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outAttachTranslate (oat)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted" data-attr-name="outAttachTranslateX">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outAttachTranslateX (oatx)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted" data-attr-name="outAttachTranslateY">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outAttachTranslateY (oaty)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 last" data-attr-name="outAttachTranslateZ">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outAttachTranslateZ (oatz)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="outDriven">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outDriven (odrvn)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="outDrivenSquash">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outDrivenSquash (odsq)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="outDrivenStretch">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outDrivenStretch (odst)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="indent0" data-attr-name="outLength">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outLength (olen)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="outLinearData">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outLinearData (oldat)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">array, connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="outLinearRotate">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outLinearRotate (olr)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted" data-attr-name="outLinearRotateX">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outLinearRotateX (olrx)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted" data-attr-name="outLinearRotateY">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outLinearRotateY (olry)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 last" data-attr-name="outLinearRotateZ">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outLinearRotateZ (olrz)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="outLinearTranslate">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outLinearTranslate (olt)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted" data-attr-name="outLinearTranslateX">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outLinearTranslateX (oltx)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 dotted" data-attr-name="outLinearTranslateY">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outLinearTranslateY (olty)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent2 last" data-attr-name="outLinearTranslateZ">
+
+
+            <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">outLinearTranslateZ (oltz)</span></td>
+            <td class="attr_type">double</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+
+
+        <tr class="indent0" data-attr-name="outNurbs">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outNurbs (onrb)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out</td>
+        </tr>
+
+
+
+
+
+        <tr class="parent indent0 dotted" data-attr-name="poseState">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">poseState (pstate)</span></td>
+            <td class="attr_type">compound</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="poseDefault">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">poseDefault (pd)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="poseDefaultStored">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">poseDefaultStored (pds)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="poseSquash">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">poseSquash (psq)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="poseSquashStored">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">poseSquashStored (psqs)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 dotted" data-attr-name="poseStretch">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">poseStretch (pst)</span></td>
+            <td class="attr_type">matrix</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="child indent1 last" data-attr-name="poseStretchStored">
+
+
+            <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">poseStretchStored (psts)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+
+
+        <tr>
+            <th colspan="5">external hidden attributes</th>
+        </tr>
+
+
+
+        <tr class="indent0" data-attr-name="isHistoricallyInteresting">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">isHistoricallyInteresting (ihi)</span></td>
+            <td class="attr_type">byte</td>
+            <td class="attr_value">
+                <div class="attr_current">2</div>
+
+
+            </td>
+            <td class="attr_minmax">0/255</td>
+            <td class="attr_flags">connectable, hidden, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="message">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">message (msg)</span></td>
+            <td class="attr_type">message</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">connectable, hidden, out</td>
+        </tr>
+
+
+
+
+
+        <tr>
+            <th colspan="5">internal attributes</th>
+        </tr>
+
+
+
+        <tr class="indent0" data-attr-name="binMembership">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">binMembership (bnm)</span></td>
+            <td class="attr_type">-</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">-</td>
+            <td class="attr_flags">hidden, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="caching">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">caching (cch)</span></td>
+            <td class="attr_type">bool</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+
+            </td>
+            <td class="attr_minmax">0/1</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+
+        <tr class="indent0" data-attr-name="nodeState">
+
+
+            <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">nodeState (nds)</span></td>
+            <td class="attr_type">enum</td>
+            <td class="attr_value">
+                <div class="attr_current">-</div>
+
+                <ul class="attr_enum_list">
+
+                    <li class="attr_enum_item">
+                        Normal (0)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        HasNoEffect (1)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Blocking (2)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Waiting-Normal (8)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Waiting-HasNoEffect (9)
+
+                    </li>
+
+                    <li class="attr_enum_item">
+                        Waiting-Blocking (10)
+
+                    </li>
+
+                </ul>
+
+
+            </td>
+            <td class="attr_minmax">0/10</td>
+            <td class="attr_flags">connectable, in, out, storable</td>
+        </tr>
+
+
+
+
+    </tbody>
+</table></section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">MayaMuscle.mll - cMuscleCreator (0x10a592)</a><ul>
+<li><a class="reference internal" href="#attributes-113">Attributes (113)</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="0x10a591.html"
+                          title="previous chapter">MayaMuscle.mll - cMuscleMultiCollide (0x10a591)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="0x10a594.html"
+                          title="next chapter">MayaMuscle.mll - cMuscleDebug (0x10a594)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/nodes/MayaMuscle.mll/0x10a592.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="0x10a594.html" title="MayaMuscle.mll - cMuscleDebug (0x10a594)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="0x10a591.html" title="MayaMuscle.mll - cMuscleMultiCollide (0x10a591)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">maya-nodes 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MayaMuscle.mll - cMuscleCreator (0x10a592)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2016, yamahigashi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+  </body>
+</html>

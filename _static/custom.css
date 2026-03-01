@@ -1,5 +1,47 @@
 
 
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div.document {
+    flex: 1 0 auto;
+}
+
+div.related ul li.maya-version-switcher {
+    float: left;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    margin: 0.1em 0.9em 0.1em 0;
+}
+
+div.related ul li.maya-version-switcher label {
+    color: #fff;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+div.related ul li.maya-version-switcher select {
+    height: 1.85em;
+    border: 1px solid #1f4f80;
+    border-radius: 3px;
+    padding: 0 0.35em;
+    background: #ffffff;
+    color: #1f2d3d;
+    font-size: 0.85em;
+}
+
+div.body {
+    max-width: 100%;
+}
+
 table.attribute {
     width: auto;
     margin: 0 auto;
@@ -84,11 +126,13 @@ table.attribute tr.child td:first-child {
     text-indent: 2ex;
 }
 
+table.attribute td .attr_label,
 table.attribute td h5 {
+    display: block;
     background-color: #a2cfe4;
     border: none !important;
     padding: 0;
-    margin: 0px 0px 0px !important;
+    margin: 0 !important;
 }
 
 table.attribute td.attr_name {
@@ -96,4 +140,26 @@ table.attribute td.attr_name {
 }
 table.attribute td.attr_type {
     background-color: #a2cfe4;
+}
+
+#all-nodes .toctree-wrapper > ul {
+    column-count: 3;
+    column-gap: 1.5em;
+}
+
+#all-nodes .toctree-wrapper > ul > li {
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid-column;
+    page-break-inside: avoid;
+}
+
+#by-category-classification .toctree-wrapper > ul > li > ul {
+    column-count: 3;
+    column-gap: 1.5em;
+}
+
+#by-category-classification .toctree-wrapper > ul > li > ul > li {
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid-column;
+    page-break-inside: avoid;
 }

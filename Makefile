@@ -6,6 +6,13 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
+PYTHON        ?= python3
+VERSION       ?=
+BUILD_VERSION = $(strip $(or $(VERSION),$(MAYA_VERSION)))
+PUBLISH_ROOT  ?= .
+SITE_DIR      ?= $(BUILDDIR)/html/$(BUILD_VERSION)
+BUILD_SOURCE  ?= $(BUILDDIR)/source/$(BUILD_VERSION)
+DOCTREES_DIR ?= $(BUILDDIR)/doctrees/$(BUILD_VERSION)
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -15,15 +22,15 @@ endif
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
+ALLSPHINXOPTS   = -d $(DOCTREES_DIR) $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(BUILD_SOURCE)
 # the i18n builder cannot share the environment and doctrees with the others
-I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
+I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(BUILD_SOURCE)
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest coverage gettext
+.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest coverage gettext publish-version publish-only prepare-source
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  html       to make standalone HTML files"
+	@echo "  html       to make standalone HTML files (from data/nodes/VERSION)"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
 	@echo "  pickle     to make pickle files"
@@ -47,14 +54,18 @@ help:
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 	@echo "  coverage   to run coverage check of the documentation (if enabled)"
+	@echo "  prepare-source [VERSION=2026] to prepare $(BUILD_SOURCE) from data/nodes"
+	@echo "  publish-version VERSION=2026 to build+publish from build/html/2026 to ./2026 and ./latest"
+	@echo "  publish-only VERSION=2026 to publish current build/html/2026 only"
 
 clean:
 	rm -rf $(BUILDDIR)/*
 
-html:
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+html: prepare-source
+	@rm -rf "$(SITE_DIR)"
+	$(SPHINXBUILD) -b html -d $(DOCTREES_DIR) $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(BUILD_SOURCE) "$(SITE_DIR)"
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+	@echo "Build finished. The HTML pages are in $(SITE_DIR)."
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
@@ -190,3 +201,27 @@ pseudoxml:
 	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
+
+publish-version: html
+	@if [ -z "$(BUILD_VERSION)" ]; then \
+		echo "Version is required. Example: make publish-version VERSION=2026"; \
+		exit 1; \
+	fi
+	$(MAKE) publish-only VERSION="$(BUILD_VERSION)" MAYA_VERSION="$(MAYA_VERSION)" PUBLISH_ROOT="$(PUBLISH_ROOT)" SITE_DIR="$(SITE_DIR)" PYTHON="$(PYTHON)"
+
+publish-only:
+	@if [ -z "$(BUILD_VERSION)" ]; then \
+		echo "Version is required. Example: make publish-only VERSION=2026"; \
+		exit 1; \
+	fi
+	$(PYTHON) tool/publish_version_site.py \
+		--version "$(BUILD_VERSION)" \
+		--site-dir "$(SITE_DIR)" \
+		--publish-root "$(PUBLISH_ROOT)"
+
+prepare-source:
+	@if [ -z "$(BUILD_VERSION)" ]; then \
+		echo "Version is required. Example: make prepare-source VERSION=2026"; \
+		exit 1; \
+	fi
+	$(PYTHON) tool/prepare_build_source.py --version "$(BUILD_VERSION)" --output-root "$(BUILD_SOURCE)"

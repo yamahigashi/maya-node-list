@@ -1,14 +1,19 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
-# Dump maya node's MTypeId in batch mayapy.
+# Dump Maya nodes and generate versioned node RST files.
 #
-# CAUTION: this may take very verey long time for execution
-#          modify idx range on your needs.
+# The default path resolves registered node types deterministically from
+# `allNodeTypes()` and then looks up each `MTypeId` via `MNodeClass`.
 ##############################################################################
 import os
 import re
+import io
+import glob
+import sys
+import json
 import traceback
-from collections import OrderedDict as OrderedDict
+from collections import OrderedDict
+from datetime import datetime
+
 from jinja2 import Environment, FileSystemLoader
 
 import maya.standalone
@@ -18,7 +23,7 @@ try:
     maya.standalone.initialize(name='python')
 except Exception as e:
     traceback.print_exc()
-    print e
+    print(e)
 
 
 import maya.api.OpenMaya as om2
@@ -26,75 +31,622 @@ import maya.cmds as cmds
 
 
 ##############################################################################
-output_dir = os.path.join(
-    os.path.abspath(os.path.dirname(__file__)),
-    r'..\source\nodes')
+root_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(root_dir)
+template_dir = os.path.join(project_root, "source", "_templates")
 
-template_dir = os.path.join(
-    os.path.abspath(os.path.dirname(__file__)),
-    r'..\source\_templates')
+env = Environment(loader=FileSystemLoader(template_dir, encoding="utf8"))
+tmpl = env.get_template("node.tpl.rst")
 
-env = Environment(loader=FileSystemLoader(template_dir, encoding='utf8'))
-tmpl = env.get_template('node.tpl.rst')
-# print r'{}\_templates'.format(template_dir)
+
+##############################################################################
+DANGEROUS_PLUGINS = [
+    "sceneAssembly",
+    "mtoa",
+    # "bifrostshellnode",
+    # "bifmeshio",
+    # "bifrostvisplugin",
+    # "bifrostgraph",
+]
+
+DANGEROUS_PLUGIN_KEYWORDS = (
+    "arnold",
+    # "bifrost",
+)
+
+DANGEROUS_NODES = [
+    # "bifShape",  # can cause Maya to crash when created
+    # "bifrostGeoToMaya",  # can cause Maya to crash when created
+]
+USER_SKIPPED_NODES = {
+    n.strip() for n in os.getenv("DUMP_SKIP_NODE_TYPES", "").split(",") if n.strip()
+}
+CREATE_NODE_INSTANCE = os.getenv("DUMP_CREATE_NODE_INSTANCE", "").strip().lower() in {
+    "1",
+    "true",
+    "yes",
+    "on",
+}
+FORCE_OS_EXIT_ON_PY2 = os.getenv("DUMP_FORCE_OS_EXIT_ON_PY2", "1").strip().lower() in {
+    "1",
+    "true",
+    "yes",
+    "on",
+}
+
+
+##############################################################################
+def resolve_maya_docs_year():
+    env_year = os.getenv("MAYA_VERSION", "").strip()
+    if re.match(r"^\d{4}$", env_year):
+        return env_year
+
+    maya_version = cmds.about(version=True) or ""
+    match = re.search(r"(20\d{2})", maya_version)
+    if match:
+        return match.group(1)
+
+    # Fallback for non-standard environments.
+    return "2016"
+
+
+def resolve_dump_version():
+    # type: () -> str
+    requested = os.getenv("MAYA_VERSION", "").strip()
+    if requested:
+        return requested
+    return resolve_maya_docs_year()
+
+
+MAYA_DOCS_YEAR = resolve_maya_docs_year()
+MAYA_DOCS_BASE_URL = "https://help.autodesk.com/cloudhelp/{}/ENU/Maya-Tech-Docs/Nodes".format(
+    MAYA_DOCS_YEAR
+)
+DUMP_VERSION = resolve_dump_version()
+output_dir = os.path.join(project_root, "data", "nodes", DUMP_VERSION)
+manifest_file = os.path.join(output_dir, "manifest.json")
+failures_file = os.path.join(output_dir, "failures.json")
+print("Dump version: {}".format(DUMP_VERSION))
+print("Output directory: {}".format(output_dir))
+
+
+##############################################################################
+ABSTRACT_SUFFIX = " (abstract)"
+
+try:
+    string_types = (basestring,)  # type: ignore[name-defined]
+except NameError:
+    string_types = (str,)
+
+try:
+    text_type = unicode  # type: ignore[name-defined]
+except NameError:
+    text_type = str
+
+
+def utc_now_iso():
+    # type: () -> str
+    return datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def to_text(value):
+    # type: (object) -> str
+    if value is None:
+        return ""
+    if isinstance(value, string_types):
+        text = value
+    else:
+        text = str(value)
+    return text.strip()
+
+
+def normalize_scalar(value):
+    # type: (object) -> str
+    text = to_text(value)
+    if text in ("", "()", "None", "null"):
+        return ""
+    return text
+
+
+def normalize_flags(flags):
+    # type: (list) -> list
+    uniq = sorted(set([to_text(flag) for flag in (flags or []) if to_text(flag)]))
+    return uniq
+
+
+def normalize_plugin_name(plugin_name):
+    # type: (str) -> str
+    name = to_text(plugin_name)
+    if not name:
+        return "_default"
+    return os.path.basename(name)
+
+
+def format_minmax_display(min_value, max_value):
+    # type: (str, str) -> str
+    if not min_value and not max_value:
+        return "-"
+    if min_value and max_value:
+        return "{}/{}".format(min_value, max_value)
+    if min_value:
+        return "{}/-".format(min_value)
+    return "-/{}".format(max_value)
+
+
+def display_or_dash(value):
+    # type: (str) -> str
+    return value if value else "-"
+
+
+def normalize_numeric_token(value):
+    # type: (object) -> str
+    text = to_text(value)
+    if not text:
+        return ""
+
+    try:
+        return str(int(text, 0))
+    except (TypeError, ValueError):
+        pass
+
+    try:
+        as_float = float(text)
+    except (TypeError, ValueError):
+        return text
+
+    if as_float.is_integer():
+        return str(int(as_float))
+    return text
+
+
+def parse_enum_items(enum_text, default_value):
+    # type: (str, str) -> list
+    normalized_enum = normalize_scalar(enum_text)
+    if not normalized_enum:
+        return []
+
+    default_text = normalize_scalar(default_value)
+    default_norm = normalize_numeric_token(default_text).lower()
+    default_name = default_text.lower()
+    tokens = [token.strip() for token in normalized_enum.split(":") if token.strip()]
+
+    items = []
+    next_value = 0
+    for token in tokens:
+        label = token
+        value_text = ""
+
+        if "=" in token:
+            name_part, value_part = token.split("=", 1)
+            label = to_text(name_part) or token
+            value_text = to_text(value_part)
+            try:
+                next_value = int(value_text, 0) + 1
+            except (TypeError, ValueError):
+                next_value = None
+        else:
+            label = to_text(token)
+            if next_value is not None:
+                value_text = str(next_value)
+                next_value += 1
+
+        item_label = label
+        if value_text:
+            item_label = "{} ({})".format(label, value_text)
+
+        is_default = False
+        if default_text:
+            if label.lower() == default_name:
+                is_default = True
+            elif value_text:
+                enum_value_norm = normalize_numeric_token(value_text).lower()
+                is_default = enum_value_norm == default_norm
+
+        items.append(
+            {
+                "name": label,
+                "value": value_text,
+                "label": item_label,
+                "is_default": is_default,
+            }
+        )
+
+    return items
+
+
+def make_failure_record(raw_id, type_name, stage, error):
+    # type: (int, str, str, object) -> dict
+    return {
+        "typeId": hex(raw_id),
+        "typeName": to_text(type_name) or "<unknown>",
+        "stage": to_text(stage) or "unknown",
+        "error": to_text(error) or "unknown error",
+    }
+
+
+def write_json_file(path, payload):
+    # type: (str, dict) -> None
+    if not os.path.isdir(os.path.dirname(path)):
+        os.makedirs(os.path.dirname(path))
+
+    json_text = json.dumps(
+        payload, indent=2, sort_keys=True, ensure_ascii=False
+    )
+    if not isinstance(json_text, text_type):
+        json_text = json_text.decode("utf-8")
+
+    with io.open(path, "w", encoding="utf-8") as fp:
+        fp.write(json_text)
+        fp.write(u"\n")
+
+
+def write_dump_artifacts(manifest_nodes, failures):
+    # type: (list, list) -> None
+    manifest_payload = {
+        "version": DUMP_VERSION,
+        "generated_at_utc": utc_now_iso(),
+        "node_count": len(manifest_nodes),
+        "nodes": manifest_nodes,
+    }
+    failures_payload = {
+        "version": DUMP_VERSION,
+        "generated_at_utc": utc_now_iso(),
+        "failure_count": len(failures),
+        "failures": failures,
+    }
+
+    write_json_file(manifest_file, manifest_payload)
+    write_json_file(failures_file, failures_payload)
+    print("Wrote {}".format(manifest_file))
+    print("Wrote {}".format(failures_file))
+
+
+def collapse_result(result, manifest_nodes, failures):
+    # type: (dict, list, list) -> None
+    if not result:
+        return
+    manifest_node = result.get("manifest_node")
+    failure = result.get("failure")
+    if manifest_node:
+        manifest_nodes.append(manifest_node)
+    if failure:
+        failures.append(failure)
+
+
+def print_processing_summary(total_targets, manifest_nodes, failures):
+    # type: (int, list, list) -> None
+    print(
+        "Processing summary: targets={}, written={}, failed={}".format(
+            total_targets, len(manifest_nodes), len(failures)
+        )
+    )
+
+
+def mtypeid_to_int(type_id):
+    """Convert Maya's MTypeId object to a plain int."""
+    raw_id = getattr(type_id, "id", None)
+    if callable(raw_id):
+        return int(raw_id())
+    if raw_id is not None:
+        return int(raw_id)
+
+    try:
+        return int(type_id)
+    except (TypeError, ValueError):
+        match = re.search(r"0x[0-9a-fA-F]+|\d+", str(type_id))
+        if not match:
+            raise ValueError(
+                "Could not resolve MTypeId value from {!r}".format(type_id)
+            )
+        return int(match.group(0), 0)
+
+
+def normalize_node_type_name(type_name):
+    normalized = str(type_name or "").strip()
+    if normalized.endswith(ABSTRACT_SUFFIX):
+        return normalized[: -len(ABSTRACT_SUFFIX)].strip()
+    return normalized
+
+
+def node_type_name(node_class):
+    type_name = getattr(node_class, "typeName", None)
+    if callable(type_name):
+        try:
+            return str(type_name())
+        except Exception:
+            pass
+    if type_name:
+        return str(type_name)
+
+    name = getattr(node_class, "name", None)
+    if callable(name):
+        try:
+            return str(name())
+        except Exception:
+            pass
+    if name:
+        return str(name)
+
+    return "<unknown>"
+
+
+def node_plugin_name(node_class):
+    plugin_name = getattr(node_class, "pluginName", None)
+    if callable(plugin_name):
+        try:
+            plugin_name = plugin_name()
+        except Exception:
+            plugin_name = ""
+    return str(plugin_name or "").strip()
+
+
+def node_classification(node_class):
+    # type: (object) -> str
+    classification = getattr(node_class, "classification", None)
+    if callable(classification):
+        try:
+            classification = classification()
+        except Exception:
+            classification = ""
+
+    if not classification:
+        classification = getattr(node_class, "classificationString", "")
+        if callable(classification):
+            try:
+                classification = classification()
+            except Exception:
+                classification = ""
+
+    return to_text(classification)
+
+
+def collect_registered_type_ids():
+    """Collect unique type IDs from currently registered node type names."""
+    seen_names = set()
+    collected = OrderedDict()
+    skipped_nodes = set(DANGEROUS_NODES) | USER_SKIPPED_NODES
+
+    for raw_name in cmds.allNodeTypes() or []:
+        type_name = normalize_node_type_name(raw_name)
+        if not type_name or type_name in seen_names:
+            continue
+        if type_name in skipped_nodes:
+            print("Skipping node type '{}'".format(type_name))
+            continue
+
+        seen_names.add(type_name)
+
+        try:
+            node_class = om2.MNodeClass(type_name)
+        except RuntimeError:
+            continue
+
+        if not node_class:
+            continue
+
+        try:
+            raw_id = mtypeid_to_int(node_class.typeId)
+        except (TypeError, ValueError) as exc:
+            print("Failed to resolve type id for {}: {}".format(type_name, exc))
+            continue
+
+        if raw_id not in collected:
+            collected[raw_id] = type_name
+
+        # print("Collected node id {} for type name '{}'".format(hex(raw_id), type_name))
+
+    return sorted(collected)
+
+
+def dump_registered_nodes_using_multiprocessing():
+    import multiprocessing as mp
+
+    load_plugins()
+    type_ids = collect_registered_type_ids()
+    print("Collected {} registered MTypeId values.".format(len(type_ids)))
+    if not type_ids:
+        print("No registered node types found.")
+        manifest_nodes = []
+        failures = []
+        write_dump_artifacts(manifest_nodes, failures)
+        print_processing_summary(0, manifest_nodes, failures)
+        return
+
+    process_count = 1  # mp.cpu_count()
+    po = mp.Pool(process_count)
+    po.map(initialize_process, range(process_count))
+    results = po.map(dump_node_by_id, type_ids)
+    po.close()
+    po.join()
+
+    manifest_nodes = []
+    failures = []
+    for result in results:
+        collapse_result(result, manifest_nodes, failures)
+    write_dump_artifacts(manifest_nodes, failures)
+    print_processing_summary(len(type_ids), manifest_nodes, failures)
+
+    print("... done processing")
+
+
+def dump_registered_nodes_serial():
+    load_plugins()
+    type_ids = collect_registered_type_ids()
+    print("Collected {} registered MTypeId values.".format(len(type_ids)))
+    if not type_ids:
+        print("No registered node types found.")
+        manifest_nodes = []
+        failures = []
+        write_dump_artifacts(manifest_nodes, failures)
+        print_processing_summary(0, manifest_nodes, failures)
+        return
+
+    manifest_nodes = []
+    failures = []
+    for raw_id in type_ids:
+        try:
+            result = dump_node_by_id(raw_id)
+            collapse_result(result, manifest_nodes, failures)
+        except Exception as exc:
+            print(
+                "Skipping {} due to unexpected error: {}".format(hex(raw_id), exc)
+            )
+            failures.append(
+                make_failure_record(raw_id, "", "unexpected", exc)
+            )
+
+    write_dump_artifacts(manifest_nodes, failures)
+    print_processing_summary(len(type_ids), manifest_nodes, failures)
+
+    print("... done processing")
 
 
 ##############################################################################
 def dump_node_by_id(raw_id):
+
+    type_id = om2.MTypeId(raw_id)
+    node_name = "<unknown>"
     try:
-        id = om2.MTypeId(raw_id)
-        nc = om2.MNodeClass(id)
+        node_class = om2.MNodeClass(type_id)
+    except RuntimeError as exc:
+        print("Failed to resolve node class for {}: {}".format(hex(raw_id), exc))
+        return {"failure": make_failure_record(raw_id, node_name, "resolveNodeClass", exc)}
 
-        if nc:
-            ac = nc.attributeCount
-            # print nc.typeName, nc.classification, nc.attributeCount
+    if not node_class:
+        return {
+            "failure": make_failure_record(
+                raw_id, node_name, "resolveNodeClass", "node class not found"
+            )
+        }
 
-        else:
-            # print("nothing to inspect")
-            return
+    node_name = node_type_name(node_class)
 
+    try:
+        attribute_count = node_class.attributeCount
+    except RuntimeError as exc:
+        print("Failed to get attribute count for {}: {}".format(hex(raw_id), exc))
+        return {"failure": make_failure_record(raw_id, node_name, "attributeCount", exc)}
+
+    obj = None
+    dpn = None
+    if CREATE_NODE_INSTANCE:
         typ = om2.MFnDependencyNode()
-        obj = typ.create(id, 'test')
+        try:
+            obj = typ.create(type_id, "test")
+        except RuntimeError as exc:
+            print(
+                "Failed to create node for {} {}".format(
+                    hex(raw_id), node_type_name(node_class)
+                )
+            )
+            return {"failure": make_failure_record(raw_id, node_name, "createNode", exc)}
         dpn = om2.MFnDependencyNode(obj)
 
-        attributes = {}
-        for num in xrange(ac):
-            a = om2.MFnAttribute(dpn.attribute(num))
-            k, v = inspect_attribute(dpn, a)
-            attributes[k] = v
+    attributes = {}
+    for num in range(attribute_count):
+        try:
+            attr_obj = dpn.attribute(num) if dpn else node_class.attribute(num)
+            a = om2.MFnAttribute(attr_obj)
+        except RuntimeError:
+            print(
+                "Failed to access attribute {} of node {} {}".format(
+                    num, hex(raw_id), node_type_name(node_class)
+                )
+            )
+            continue
 
-        # organize attributes in preparation for writing
-        attributes = OrderedDict(sorted(attributes.items()))
-        attributes = consolidate_kids(attributes)
-        appear_in_cbox_attrs = OrderedDict((k, v) for (k, v) in attributes.iteritems() if v['is_appear_cbox'])
-        extern_attrs = OrderedDict((k, v) for (k, v) in attributes.iteritems() if not v['is_internal'] and not v['is_appear_cbox'] and not v['is_hidden'])
-        extern_hidden = OrderedDict((k, v) for (k, v) in attributes.iteritems() if not v['is_internal'] and not v['is_appear_cbox'] and v['is_hidden'])
-        internal_attrs = OrderedDict((k, v) for (k, v) in attributes.iteritems() if v['is_internal'])
+        try:
+            k, v = inspect_attribute(a, node_obj=obj)
+        except RuntimeError as exc:
+            print(
+                "Failed to inspect attribute {} of node {} {}: {}".format(
+                    num, hex(raw_id), node_type_name(node_class), exc
+                )
+            )
+            continue
 
-        plugin_name = dpn.pluginName or "_default"
+        attributes[k] = v
 
-        # import json
-        # with open(r'{}\{}.json'.format(output_dir, hex(raw_id)), 'w') as fp:
-        #     json.dump(attributes, fp)
-        write_rst(plugin_name, raw_id, nc, attributes, appear_in_cbox_attrs,
-                  extern_attrs, extern_hidden, internal_attrs)
-        # print(hex(raw_id), 'done')
+    # organize attributes in preparation for writing
+    attributes = OrderedDict(sorted(attributes.items()))
+    attributes = consolidate_kids(attributes)
+    appear_in_cbox_attrs = OrderedDict(
+        (k, v) for (k, v) in attributes.items() if v["is_appear_cbox"]
+    )
+    extern_attrs = OrderedDict(
+        (k, v)
+        for (k, v) in attributes.items()
+        if not v["is_internal"] and not v["is_appear_cbox"] and not v["is_hidden"]
+    )
+    extern_hidden = OrderedDict(
+        (k, v)
+        for (k, v) in attributes.items()
+        if not v["is_internal"] and not v["is_appear_cbox"] and v["is_hidden"]
+    )
+    internal_attrs = OrderedDict(
+        (k, v) for (k, v) in attributes.items() if v["is_internal"]
+    )
 
-        dg_mod = om2.MDGModifier()
-        dg_mod.deleteNode(obj)
-        dg_mod.doIt()
+    try:
+        plugin_name = (
+            dpn.pluginName if dpn else node_plugin_name(node_class)
+        ) or "_default"
+    except RuntimeError as exc:
+        print("Failed to resolve plugin name for {}: {}".format(hex(raw_id), exc))
+        plugin_name = "_default"
+
+    try:
+        write_rst(
+            plugin_name,
+            raw_id,
+            node_class,
+            attributes,
+            appear_in_cbox_attrs,
+            extern_attrs,
+            extern_hidden,
+            internal_attrs,
+        )
+    except Exception as exc:
+        print("Failed to write rst for {} {}: {}".format(hex(raw_id), node_name, exc))
+        return {"failure": make_failure_record(raw_id, node_name, "writeRst", exc)}
+
+    if obj is not None:
+        try:
+            dg_mod = om2.MDGModifier()
+            dg_mod.deleteNode(obj)
+            dg_mod.doIt()
+        except RuntimeError as exc:
+            # Some plug-ins can fail deletion in standalone; do not abort full dump.
+            print("Failed to delete temporary node {}: {}".format(hex(raw_id), exc))
+            try:
+                cmds.delete(dpn.name())
+            except Exception:
+                pass
 
         del obj
         del dpn
 
-    except RuntimeError:
-        return
+    manifest_node = build_manifest_node(
+        raw_id=raw_id,
+        node_name=node_name,
+        plugin_name=plugin_name,
+        classification=node_classification(node_class),
+        attribute_count=attribute_count,
+        attributes=attributes,
+    )
+
+    return {"manifest_node": manifest_node}
 
 
-def inspect_attribute(dpn, attr):
+def inspect_attribute(attr, node_obj=None):
     ''' inspect given attribute and return its longname and information as dict '''
 
-    plg = om2.MPlug(dpn.object(), attr.object())
+    plg = None
+    if node_obj is not None:
+        try:
+            plg = om2.MPlug(node_obj, attr.object())
+        except RuntimeError:
+            pass
 
     name_long = attr.name
     name_short = attr.shortName
@@ -103,9 +655,8 @@ def inspect_attribute(dpn, attr):
     # set_cmd = plg.getSetAttrCmds(om2.MPlug.kAll, True)  # never use
 
     flags = []
-    is_internal = False
     kwargs = parse_mel_cmd_args(add_cmd)
-    attr_type = kwargs.get('attributeType', '')
+    attr_type = kwargs.get("attributeType", "")
 
     is_appear_cbox = attr.channelBox
     is_extension = attr.extension
@@ -117,66 +668,111 @@ def inspect_attribute(dpn, attr):
     is_storable = attr.storable
     is_keyable = attr.keyable
 
-    is_internal = bool(kwargs.get('internalSet', False))
     is_internal = attr.internal
 
     # if keyable, appear in channel box ref: http://download.autodesk.com/us/maya/2011help/API/class_m_fn_attribute.html#ea44dd2a0f7d68a3e47f713b7732d05c
-    if is_keyable: is_appear_cbox = True
+    if is_keyable:
+        is_appear_cbox = True
 
-    if is_extension: flags.append("extension")
+    if is_extension:
+        flags.append("extension")
     if is_connectable:
         flags.append("connectable")
-        if is_writable: flags.append("in")
-        if is_readable: flags.append("out")
+        if is_writable:
+            flags.append("in")
+        if is_readable:
+            flags.append("out")
 
-    if is_storable: flags.append("storable")
-    if is_array: flags.append("array")
-    if is_keyable: flags.append("keyable")
-    if is_hidden: flags.append("hidden")
+    if is_storable:
+        flags.append("storable")
+    if is_array:
+        flags.append("array")
+    if is_keyable:
+        flags.append("keyable")
+    if is_hidden:
+        flags.append("hidden")
 
     parent = None
-    if plg.isChild:
-        parent = om2.MFnAttribute(attr.parent).name
+    try:
+        parent_obj = attr.parent
+        if hasattr(parent_obj, "isNull") and not parent_obj.isNull():
+            parent = om2.MFnAttribute(parent_obj).name
+    except RuntimeError:
+        pass
 
-    val = get_plug_val(attr_type, plg, kwargs)
-    def_val = kwargs.get('defaultValue', None)
-    min_val = kwargs.get('minValue', None)
-    max_val = kwargs.get('maxValue', None)
+    val = kwargs.get("defaultValue", "")
+    if plg is not None:
+        val = get_plug_val(attr_type, plg, kwargs)
+    def_val = kwargs.get("defaultValue", None)
+    min_val = kwargs.get("minValue", None)
+    max_val = kwargs.get("maxValue", None)
+    enum_val = kwargs.get("enumName", "")
+
+    flags = normalize_flags(flags)
+    val = normalize_scalar(val)
+    def_val = normalize_scalar(def_val)
+    min_val = normalize_scalar(min_val)
+    max_val = normalize_scalar(max_val)
+    enum_val = normalize_scalar(enum_val)
+    if "enum" in normalize_scalar(attr_type).lower() and not def_val and val:
+        def_val = val
+    enum_items = parse_enum_items(enum_val, def_val)
+
     value = {
-        'short_name': name_short,
-        'type': attr_type,
-        'parent': parent,
-        'add_cmd': add_cmd,
-        'value': val,
-        'default_value': def_val or '',
-        'min_value': min_val or '',
-        'max_value': max_val or '',
-        'flags': flags,
-        'is_internal': is_internal,
-        'is_appear_cbox': is_appear_cbox,
-        'is_hidden': is_hidden,
-        'kids': {}
+        "short_name": name_short,
+        "type": normalize_scalar(attr_type),
+        "parent": parent,
+        "add_cmd": add_cmd,
+        "value": val,
+        "default_value": def_val,
+        "min_value": min_val,
+        "max_value": max_val,
+        "enum": enum_val,
+        "flags": flags,
+        "display_value": display_or_dash(val),
+        "display_default": display_or_dash(def_val),
+        "display_minmax": format_minmax_display(min_val, max_val),
+        "display_flags": ", ".join(flags) if flags else "-",
+        "display_type": display_or_dash(normalize_scalar(attr_type)),
+        "display_enum": enum_val.replace(":", ", ") if enum_val else "",
+        "display_enum_items": enum_items,
+        "is_internal": is_internal,
+        "is_appear_cbox": is_appear_cbox,
+        "is_hidden": is_hidden,
+        "kids": {},
     }
     return name_long, value
 
 
 def get_plug_val(attr_type, plg, kwargs):
-    val = ''
+    val = ""
     try:
-        if   'bool'         in attr_type: val = plg.asBool()
-        elif 'byte'         in attr_type: val = plg.asBool()
-        elif 'double'       in attr_type: val = plg.asDouble()
-        elif 'double3'      in attr_type: val = plg.asMDataHandle().asDouble3()
-        elif 'doubleAngle'  in attr_type: val = plg.asMAngle()
-        elif 'doubleLinear' in attr_type: val = plg.asMDistance()
-        elif 'float'        in attr_type: val = plg.asFloat()
-        elif 'float3'       in attr_type: val = plg.asMDataHandle().asFloat3()
-        elif 'long'         in attr_type: val = plg.asFloat()
-        elif 'message'      in attr_type: val = plg.asString()
-        elif 'short'        in attr_type: val = plg.asShort()
-        elif 'time'         in attr_type: val = plg.asMTime().asUnits(om2.MTime.kSeconds)
-
-        elif 'enum'         in attr_type: val = kwargs.get('enumName', '')
+        if "bool" in attr_type:
+            val = plg.asBool()
+        elif "byte" in attr_type:
+            val = plg.asBool()
+        elif "double" in attr_type:
+            val = plg.asDouble()
+        elif "double3" in attr_type:
+            val = plg.asMDataHandle().asDouble3()
+        elif "doubleAngle" in attr_type:
+            val = plg.asMAngle()
+        elif "doubleLinear" in attr_type:
+            val = plg.asMDistance()
+        elif "float" in attr_type:
+            val = plg.asFloat()
+        elif "float3" in attr_type:
+            val = plg.asMDataHandle().asFloat3()
+        elif "long" in attr_type:
+            val = plg.asFloat()
+        elif "message" in attr_type:
+            val = plg.asString()
+        elif "short" in attr_type:
+            val = plg.asShort()
+        elif "time" in attr_type:
+            val = plg.asMTime().asUnits(om2.MTime.kSeconds)
+        elif "enum" in attr_type:
+            val = plg.asShort()
         # elif 'compound'     in attr_type: val = plg.asMDataHandle()
 
     except RuntimeError:
@@ -191,8 +787,9 @@ def parse_mel_cmd_args(cmd):
     results = {}
     exp = re.compile(" -")
     for a in exp.split(cmd):
-        k = a.split(" ")[0]
-        v = " ".join(a.split(" ")[1:]) or u"true"
+        parts = a.split(" ")
+        k = parts[0]
+        v = " ".join(parts[1:]) or "true"
         v = v.lstrip('"').rstrip(';').rstrip('"')
 
         results[k] = v
@@ -203,43 +800,135 @@ def parse_mel_cmd_args(cmd):
 def consolidate_kids(arr):
 
     results = OrderedDict()
-    for k, v in arr.iteritems():
+    for k, v in arr.items():
 
-        if v['parent']:
-            if v['parent'] not in results:
-                results[v['parent']] = arr[v['parent']]
+        if v["parent"]:
+            parent_name = v["parent"]
+            parent_value = arr.get(parent_name)
+            if parent_value is None:
+                results[k] = v
+                continue
 
-            results[v['parent']]['kids'][k] = v
-            if v['is_appear_cbox']:
+            if parent_name not in results:
+                results[parent_name] = parent_value
+
+            results[parent_name]["kids"][k] = v
+            if v["is_appear_cbox"]:
                 # apper parent in channel box, if kids visible
-                results[v['parent']]['is_appear_cbox'] = True
+                results[parent_name]["is_appear_cbox"] = True
 
         results[k] = v
 
     # return filter(lambda x: not x['parent'], results)
-    return OrderedDict((k, v) for k, v in results.items() if not v['parent'])
+    return OrderedDict((k, v) for k, v in results.items() if not v["parent"])
 
 
-def write_rst(plugin_name, raw_id, node_class, attributes, appear_in_cbox_attrs,
-              extern_attrs, extern_hidden, internal_attrs):
+def flatten_attribute_tree(attributes):
+    # type: (OrderedDict) -> list
+    flattened = []
 
-    d = r'{}\{}'.format(output_dir, os.path.basename(plugin_name))
-    if not os.path.exists(d):
-        os.makedirs(os.path.abspath(d))
+    def _walk(items):
+        # type: (OrderedDict) -> None
+        for name, info in items.items():
+            flattened.append((name, info))
+            kids = info.get("kids") or OrderedDict()
+            if kids:
+                _walk(kids)
 
-    with open(r'{}\{}\{}.rst'.format(output_dir, os.path.basename(plugin_name), hex(raw_id)), 'w') as fp:
-        dat = apply_rst_template(
-            raw_id, node_class, attributes,
-            appear_in_cbox_attrs, internal_attrs, extern_attrs, extern_hidden=extern_hidden,
-            plugin=os.path.basename(plugin_name))
-        fp.writelines(dat)
-        # json.dump(attributes, fp)
+    _walk(attributes)
+    return flattened
 
 
-def apply_rst_template(id, node, attrs, appear_in_cbox_attrs, internal_attrs, extern_attrs, extern_hidden, **kwargs):
+def build_manifest_attribute(name, info):
+    # type: (str, dict) -> dict
+    flags = normalize_flags(info.get("flags", []))
+    return {
+        "name": to_text(name),
+        "shortName": to_text(info.get("short_name")),
+        "type": normalize_scalar(info.get("type")),
+        "value": normalize_scalar(info.get("value")),
+        "default": normalize_scalar(info.get("default_value")),
+        "min": normalize_scalar(info.get("min_value")),
+        "max": normalize_scalar(info.get("max_value")),
+        "enum": normalize_scalar(info.get("enum")),
+        "parent": normalize_scalar(info.get("parent")),
+        "flags": flags,
+    }
+
+
+def build_manifest_node(
+    raw_id, node_name, plugin_name, classification, attribute_count, attributes
+):
+    # type: (int, str, str, str, int, OrderedDict) -> dict
+    flattened = flatten_attribute_tree(attributes)
+    manifest_attrs = []
+    for name, info in flattened:
+        manifest_attrs.append(build_manifest_attribute(name, info))
+
+    manifest_attrs = sorted(manifest_attrs, key=lambda item: item["name"].lower())
+    return {
+        "typeId": hex(raw_id),
+        "typeName": to_text(node_name) or "<unknown>",
+        "plugin": normalize_plugin_name(plugin_name),
+        "classification": normalize_scalar(classification),
+        "attributeCount": int(attribute_count),
+        "attributes": manifest_attrs,
+    }
+
+
+def write_rst(
+    plugin_name,
+    raw_id,
+    node_class,
+    attributes,
+    appear_in_cbox_attrs,
+    extern_attrs,
+    extern_hidden,
+    internal_attrs,
+):
+    plugin_basename = os.path.basename(plugin_name)
+    plugin_dir = os.path.join(output_dir, plugin_basename)
+    if not os.path.isdir(plugin_dir):
+        os.makedirs(plugin_dir)
+
+    output_file = os.path.join(plugin_dir, "{}.rst".format(hex(raw_id)))
+    dat = apply_rst_template(
+        raw_id,
+        node_class,
+        attributes,
+        appear_in_cbox_attrs,
+        internal_attrs,
+        extern_attrs,
+        extern_hidden=extern_hidden,
+        plugin=plugin_basename,
+        maya_docs_year=MAYA_DOCS_YEAR,
+        maya_docs_base_url=MAYA_DOCS_BASE_URL,
+    )
+    with io.open(output_file, "w", encoding="utf-8") as fp:
+        fp.write(dat)
+    # json.dump(attributes, fp)
+
+
+def apply_rst_template(
+    node_id,
+    node,
+    attrs,
+    appear_in_cbox_attrs,
+    internal_attrs,
+    extern_attrs,
+    extern_hidden,
+    **kwargs
+):
     results = tmpl.render(
-        id=hex(id), node=node, attributes=attrs, appear_in_cbox_attrs=appear_in_cbox_attrs,
-        internal_attrs=internal_attrs, extern_attrs=extern_attrs, extern_hidden=extern_hidden, **kwargs)
+        id=hex(node_id),
+        node=node,
+        attributes=attrs,
+        appear_in_cbox_attrs=appear_in_cbox_attrs,
+        internal_attrs=internal_attrs,
+        extern_attrs=extern_attrs,
+        extern_hidden=extern_hidden,
+        **kwargs
+    )
 
     return results
 
@@ -248,73 +937,59 @@ def initialize_process(*args):
     load_plugins()
 
 
-def load_plugins():
+def maybe_force_os_exit(exit_code):
+    # type: (int) -> None
+    if sys.version_info[0] >= 3:
+        return
+    if not FORCE_OS_EXIT_ON_PY2:
+        return
 
-    default_plugins = [
-        "cleanPerFaceAssignment.mll",
-        "ddsFloatReader.mll",
-        "autoLoader.mll",
-        "rotateHelper.mll",
-        "clearcoat.mll",
-        "ArubaTessellator.mll",
-        "nearestPointOnMesh.mll",
-        "ik2Bsolver.mll",
-        "objExport.mll",
-        "dgProfiler.mll",
-        "DirectConnect.mll",
-        "quatNodes.mll",
-        "hlslShader.mll",
-        "matrixNodes.mll",
-        "ikSpringSolver.mll",
-        "animImportExport.mll",
-        "melProfiler.mll",
-        # "sceneAssembly.mll",  # cause crash in batch
-        "rtgExport.mll",
-        "atomImportExport.mll",
-        "tiffFloatReader.mll",
-        "ge2Export.mll",
-        "vrml2Export.mll",
-        "openInventor.mll",
-        "AutodeskPacketFile.mll",
-        "cgfxShader.mll",
-        "fltTranslator.mll",
-        "stereoCamera.mll",
-        "OneClick.mll",
-        "studioImport.mll",
-        "Fur.mll",
-        "Unfold3D.mll",
-        "VectorRender.mll",
-        "dx11Shader.mll",
-        "OpenEXRLoader.mll",
-        "MASH.mll",
-        "mayaHIK.mll",
-        "MayaMuscle.mll",
-        "modelingToolkit.mll",
-        "shaderFXPlugin.mll",
-        "bullet.mll",
-        "AbcBullet.mll",
-        "AbcImport.mll",
-        "AbcExport.mll",
-        "gpuCache.mll",
-        "mayaCharacterization.mll",
-        "Turtle.mll",
-        "bifrostvisplugin.mll",
-        "bifrostshellnode.mll",
-        "BifrostMain.mll",
-        "fbxmaya.mll",
-        "Substance.mll",
-        "xgenToolkit.mll"
-    ]
+    try:
+        sys.stdout.flush()
+        sys.stderr.flush()
+    except Exception:
+        pass
+
+    os._exit(exit_code)
+
+
+def load_plugins():
+    allow_unsafe = os.getenv("DUMP_ALLOW_UNSAFE_PLUGINS", "").strip().lower() in {
+        "1",
+        "true",
+        "yes",
+        "on",
+    }
+
+    def is_dangerous_plugin(stem):
+        if stem in DANGEROUS_PLUGINS:
+            return True
+        lower = stem.lower()
+        return any(keyword in lower for keyword in DANGEROUS_PLUGIN_KEYWORDS)
+
+    plugin_paths = []
+    for p in os.getenv("MAYA_PLUG_IN_PATH", "").split(os.pathsep):
+        if p:
+            plugin_paths.extend(glob.glob(os.path.join(p, "*.mll")))
+            plugin_paths.extend(glob.glob(os.path.join(p, "*.py")))
+
+    plugin_names = []
+    for path in plugin_paths:
+        stem = os.path.splitext(os.path.basename(path))[0]
+        name = os.path.basename(path)
+        if not allow_unsafe and is_dangerous_plugin(stem):
+            print("Skipping dangerous plugin '{}'".format(name))
+            continue
+        plugin_names.append(name)
+    plugin_names = sorted(set(plugin_names))
 
     def _l(name):
         try:
-            # print "load plugin load: ", name
             cmds.loadPlugin(name)
-        except:
+        except Exception:
             pass
-            # print "pass plugin load: ", name
 
-    for n in default_plugins:
+    for n in plugin_names:
         _l(n)
 
 
@@ -1251,33 +1926,29 @@ known_idx = [
 ]
 
 
-def dump_sigle_id(id):
+def dump_sigle_id(node_id):
     load_plugins()
-    dump_node_by_id(id)
+    dump_node_by_id(node_id)
 
 
 def dump_indice(indice):
     load_plugins()
-    for id in indice:
-        dump_node_by_id(id)
+    for node_id in indice:
+        dump_node_by_id(node_id)
 
 
 def dump_id_range_using_multiprocessing():
 
     import multiprocessing as mp
-    import itertools  # python 2.x can not iterate over 'long int' cause overflow error
-    range = lambda start, stop: iter(itertools.count(start).next, stop)
-
-    process_count = 4  # mp.cpu_count()
+    process_count = 1  # mp.cpu_count()
     po = mp.Pool(process_count)
-    po.map(initialize_process, xrange(process_count))
+    po.map(initialize_process, range(process_count))
 
     start = 0x30000000
     steps = 0x00001000
     end = 0x90000001
 
     while start < end:
-        # print('start processing...', start)
         res = po.map_async(dump_node_by_id, range(start, start + steps))
 
         # wait a moment as the main process eat up huge memory
@@ -1310,4 +1981,19 @@ if __name__ == "__main__":
     # ---------------------------------------------------------
     # dump for id range using multiprocessing
     # ---------------------------------------------------------
-    dump_id_range_using_multiprocessing()
+    # dump_id_range_using_multiprocessing()
+
+    # ---------------------------------------------------------
+    # dump for registered node types (deterministic in-session set)
+    # ---------------------------------------------------------
+    _exit_code = 0
+    try:
+        dump_registered_nodes_serial()
+        # dump_registered_nodes_using_multiprocessing()
+    except Exception:
+        traceback.print_exc()
+        _exit_code = 1
+    finally:
+        maybe_force_os_exit(_exit_code)
+
+    raise SystemExit(_exit_code)
