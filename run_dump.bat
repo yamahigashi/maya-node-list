@@ -5,7 +5,7 @@ set "PATH=%PFX%tool;%PFX%tool\vendor;%PATH%"
 set "PYTHONPATH=%PFX%tool\vendor"
 pushd "%PFX%"
 
-set "MAYA_VERSION=2026"
+set "MAYA_VERSION=2027"
 set MAYA_UI_LANGUAGE=en_US
 set "DUMP_ARGS="
 

@@ -1,0 +1,684 @@
+
+.. index::
+    single: aiImagerInference
+    single: 0x115dc6
+    single: category; imager
+    single: category; rendernode; arnold; imager
+    single: category; swatch; ArnoldRenderSwatch
+
+mtoa.mll - aiImagerInference (0x115dc6)
+=======================================================================================================================================
+
+:classification:
+    
+    
+    imager
+    
+    rendernode/arnold/imager
+    
+    swatch/ArnoldRenderSwatch
+    
+    
+
+:plugin:
+    C:/Program Files/Autodesk/Arnold/Maya2027/plug-ins/mtoa.mll
+
+:id:
+    0x115dc6
+
+
+
+
+Attributes (19)
+--------------------------------------
+
+
+
+.. raw:: html
+
+    <table class="attribute">
+        <tbody>
+            <tr>
+                <th class="attr_name">Long name (short name)</th>
+                <th class="attr_type">Type</th>
+                <th class="attr_default">Value</th>
+                <th class="attr_minmax">Min/Max</th>
+                <th class="attr_flags">Flags</th>
+            </tr>
+            
+            <tr>
+                <th colspan="5">channel box</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="input">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input (input)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, keyable, out</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">external visible attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="blend">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">blend (blend)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="blendMode">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">blendMode (blend_mode)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            overwrite (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            atop (1)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            average (2)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            cojoint_over (3)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            color_burn (4)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            color_dodge (5)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            difference (6)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            disjoint_over (7)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            divide (8)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            exclusion (9)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            from (10)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            geometric (11)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            glow (12)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            hard_light (13)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            hard_mix (14)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            hypot_diagonal (15)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            in (16)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            linear_light (17)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            mask (18)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            matte (19)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            max (20)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            min (21)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            minus (22)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            multiply (23)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            negation (24)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            out (25)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            over (26)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            overlay (27)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            phoenix (28)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            pin_light (29)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            plus (30)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            reflect (31)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            screen (32)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            soft_light (33)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            stencil (34)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            subtract (35)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            under (36)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            vivid_light (37)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            xor (38)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            normal_map (39)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/39</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="colorSpace">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">colorSpace (color_space)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="enable">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">enable (enable)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozen">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozen (fzn)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozenAffected">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozenAffected (fza)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="inferenceDevice">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">inferenceDevice (inference_device)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            CPU (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            GPU (1)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="inputMultiply">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">inputMultiply (input_multiply)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">9.9999997473787516e-05/-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="layerSelection">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">layerSelection (layer_selection)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="modelPath">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">modelPath (model_path)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="out">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">out (out)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="outputDivide">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outputDivide (output_divide)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">9.9999997473787516e-05/-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="transformPreset">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">transformPreset (transform_preset)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            none (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item default">
+                            sRGB_255 (1)
+                            
+                            <span class="enum_default">(default)</span>
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">external hidden attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="isHistoricallyInteresting">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">isHistoricallyInteresting (ihi)</span></td>
+                <td class="attr_type">byte</td>
+                <td class="attr_value">
+                    <div class="attr_current">2</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/255</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="message">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">message (msg)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, hidden, out</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">internal attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="binMembership">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">binMembership (bnm)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">hidden, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="caching">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">caching (cch)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="nodeState">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">nodeState (nds)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Normal (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            HasNoEffect (1)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Blocking (2)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Normal (8)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-HasNoEffect (9)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Blocking (10)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/10</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+            
+        </tbody>
+    </table>
+

@@ -15,5 +15,7 @@ set VERSION=2025
 call make.bat publish-version VERSION=2025
 set VERSION=2026
 call make.bat publish-version VERSION=2026
+set VERSION=2027
+call make.bat publish-version VERSION=2027
 
 popd

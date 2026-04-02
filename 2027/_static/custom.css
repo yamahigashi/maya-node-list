@@ -1,0 +1,274 @@
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div.document {
+    flex: 1 0 auto;
+}
+
+div.related ul li.maya-version-switcher {
+    float: left;
+    margin: 0 0.9em 0 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+div.related ul li.maya-version-switcher label {
+    color: inherit;
+    font-size: 0.9em;
+}
+
+div.related ul li.maya-version-switcher select {
+    height: 1.9em;
+    font-size: 0.9em;
+}
+
+.version-diff-box {
+    margin: 0 0 1em;
+}
+
+.version-diff-panel {
+    border: 1px solid #d8d8d8;
+    background: #f7f7f7;
+    border-radius: 3px;
+    padding: 0.55em 0.75em;
+}
+
+.version-diff-panel .meta {
+    color: #666;
+    margin-right: 0.8em;
+}
+
+.version-diff-panel .detail {
+    margin-top: 0.35em;
+    line-height: 1.45;
+}
+
+.version-diff-panel .diff-detail-row {
+    margin-top: 0.24em;
+}
+
+.version-diff-panel .diff-detail-row:first-child {
+    margin-top: 0;
+}
+
+.version-diff-panel .diff-item-list {
+    margin: 0.2em 0 0.2em 1.3em;
+    padding: 0;
+}
+
+.version-diff-panel .diff-item-list li {
+    margin: 0.1em 0;
+}
+
+.version-diff-panel details.diff-more {
+    margin: 0.2em 0 0 1.3em;
+}
+
+.version-diff-panel details.diff-more > summary {
+    cursor: pointer;
+    color: #555;
+    font-size: 90%;
+}
+
+.version-diff-panel .added {
+    color: #2f7d31;
+    font-weight: 600;
+}
+
+.version-diff-panel .removed {
+    color: #b33232;
+    font-weight: 600;
+}
+
+.version-diff-panel .changed {
+    color: #1f5f99;
+    font-weight: 600;
+}
+
+.diff-badge {
+    display: inline-block;
+    margin-left: 0.35em;
+    padding: 0 0.38em;
+    border: 1px solid #c5c5c5;
+    border-radius: 0.9em;
+    background: #ffffff;
+    color: #555;
+    font-size: 75%;
+    font-weight: 600;
+    line-height: 1.45;
+    vertical-align: baseline;
+    text-transform: lowercase;
+}
+
+.diff-badge.diff-added {
+    border-color: #a7d8a7;
+    background: #edf8ed;
+    color: #2f7d31;
+}
+
+.diff-badge.diff-changed {
+    border-color: #a8c9e7;
+    background: #edf4fb;
+    color: #1f5f99;
+}
+
+.diff-badge.diff-failed {
+    border-color: #e4b1b1;
+    background: #fdf1f1;
+    color: #b33232;
+}
+
+table.attribute {
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    font-size: 0.9em;
+    white-space: nowrap;
+    border: none;
+    border-top: solid 1px #666;
+    border-bottom: solid 1px #666;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f5f5f5;
+}
+
+table.attribute th,
+table.attribute td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+table.attribute th {
+    background: #295890;
+    vertical-align: middle;
+    text-align: left;
+    width: 100px;
+    overflow: visible;
+    position: relative;
+    color: #fff;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+table.attribute td.attr_type {
+    text-align: right;
+}
+
+table.attribute td:first-child {
+    padding: 0 0 0 10px;
+    vertical-align: middle;
+}
+
+table.attribute tr td {
+    border-bottom: solid 1px #c0cbd7;
+}
+
+table.attribute tr.dotted td {
+    border-bottom: dashed 1px #ababab;
+}
+
+table.attribute tr.child td:first-child {
+    text-indent: 2ex;
+}
+
+table.attribute td.attr_name,
+table.attribute td.attr_type {
+    background-color: #a2cfe4;
+}
+
+table.attribute td.attr_value {
+    min-width: 18em;
+    white-space: normal;
+}
+
+table.attribute td.attr_value .attr_current {
+    font-weight: 600;
+}
+
+table.attribute td.attr_value .attr_default {
+    margin-top: 0.25em;
+    color: #666;
+}
+
+table.attribute td.attr_value .attr_enum_list {
+    margin: 0.25em 0 0 1.2em;
+    padding: 0;
+}
+
+table.attribute td.attr_value .attr_enum_item {
+    list-style: disc;
+    margin: 0.08em 0;
+    white-space: normal;
+}
+
+table.attribute td.attr_value .attr_enum_item.default {
+    font-weight: 600;
+}
+
+table.attribute td.attr_value .attr_enum_item .enum_default {
+    color: #666;
+    font-size: 90%;
+}
+
+table.attribute tr.diff-row-added td.attr_name {
+    background-color: #e8f5e8;
+}
+
+table.attribute tr.diff-row-changed td.attr_name {
+    background-color: #e9f2fb;
+}
+
+#categories > ul,
+#all-nodes .toctree-wrapper > ul,
+.category-links > ul {
+    column-width: 22em;
+    column-gap: 1.8em;
+}
+
+#categories > ul > li,
+#all-nodes .toctree-wrapper > ul > li,
+.category-links > ul > li {
+    break-inside: avoid-column;
+    page-break-inside: avoid;
+}
+
+dl.field-list.simple dt.node-diff-field {
+    margin-top: 0.15em;
+}
+
+dl.field-list.simple dd.node-diff-value p {
+    margin: 0;
+}
+
+dl.field-list.simple dd.node-diff-value .status.added {
+    color: #2f7d31;
+    font-weight: 600;
+}
+
+dl.field-list.simple dd.node-diff-value .status.removed,
+dl.field-list.simple dd.node-diff-value .status.failed {
+    color: #b33232;
+    font-weight: 600;
+}
+
+dl.field-list.simple dd.node-diff-value .status.changed {
+    color: #1f5f99;
+    font-weight: 600;
+}
+
+dl.field-list.simple dd.node-diff-value .status.unchanged {
+    color: #666;
+}
+
+dl.field-list.simple dd.node-diff-value .meta {
+    color: #666;
+    font-size: 90%;
+}
