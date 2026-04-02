@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-02T11:42:35.469098Z",
+  "generated_at_utc": "2026-04-02T13:01:55.465645Z",
   "new_version": "2026",
   "node_diff": {
     "added_nodes": [
@@ -367,6 +367,973 @@
       "0x584d5455"
     ],
     "changed": {
+      "0x115c00": {
+        "attribute_summary": {
+          "added": 3,
+          "changed": 0,
+          "removed": 1
+        },
+        "attributes": {
+          "added": [
+            "proceduralInstancingOptimization",
+            "report_enable",
+            "report_file"
+          ],
+          "changed": {},
+          "removed": [
+            "sssUseAutobump"
+          ]
+        },
+        "classification": "",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiOptions"
+      },
+      "0x115c03": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 3,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "layerEnableFiltering": {
+              "default": {
+                "new": "1",
+                "old": ""
+              }
+            },
+            "layerHalfPrecision": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "layerTolerance": {
+              "default": {
+                "new": "4.5753782615065575e-05",
+                "old": "true"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiAOVDriver"
+      },
+      "0x115c05": {
+        "attribute_summary": {
+          "added": 5,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [
+            "pointsAttributePoint",
+            "pointsAttributeRadius",
+            "pointsAttributeVelocity",
+            "pointsMinPixelWidth",
+            "pointsMode"
+          ],
+          "changed": {
+            "type": {
+              "enum": {
+                "new": "volume:implicit:points",
+                "old": "volume:implicit"
+              },
+              "max": {
+                "new": "2",
+                "old": "1"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/geometry/arnold/volume",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiVolume"
+      },
+      "0x115c83": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 4,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "farEnd": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            },
+            "farStart": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            },
+            "nearEnd": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            },
+            "nearStart": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:light/filter:rendernode/arnold/light/filter:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiLightDecay"
+      },
+      "0x115d03": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "aoDistance": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiUtility"
+      },
+      "0x115d07": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "farClip": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            },
+            "nearClip": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiAmbientOcclusion"
+      },
+      "0x115d0a": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "distance": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            },
+            "height": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/atmosphere:shader/atmosphere:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiFog"
+      },
+      "0x115d16": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 3,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "deepScatterRadius": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            },
+            "midScatterRadius": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            },
+            "shallowScatterRadius": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:legacy:rendernode/arnold/legacy:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiSkin"
+      },
+      "0x115d22": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "distance": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/shader:swatch/ArnoldRenderSwatch:utility/shader",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiDistance"
+      },
+      "0x115d51": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 3,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "subsurfaceScale": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            },
+            "transmissionDepth": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            },
+            "transmissionShadowDensity": {
+              "default": {
+                "new": "0.5",
+                "old": ""
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/standard_surface:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiStandardSurface"
+      },
+      "0x115d54": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "shader1A": {
+              "default": {
+                "new": "",
+                "old": "5.4930899801532829e-43"
+              }
+            },
+            "shader2A": {
+              "default": {
+                "new": "",
+                "old": "5.4930899801532829e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiMixShader"
+      },
+      "0x115d55": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 7,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "cameraA": {
+              "default": {
+                "new": "",
+                "old": "4.5914945482066956e-41"
+              }
+            },
+            "diffuseReflectionA": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "diffuseTransmissionA": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "shadowA": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "specularReflectionA": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "specularTransmissionA": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "volumeA": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiRaySwitch"
+      },
+      "0x115d58": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "depth": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/texture:swatch/ArnoldRenderSwatch:texture",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiFlakes"
+      },
+      "0x115d59": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "backA": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "frontA": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiTwoSided"
+      },
+      "0x115d7b": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 20,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "input0A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input10A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input11A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input12A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input13A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input14A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input15A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input16A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input17A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input18A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input19A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input1A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input2A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input3A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input4A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input5A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input6A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input7A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input8A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "input9A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiSwitch"
+      },
+      "0x115d87": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "beautyA": {
+              "default": {
+                "new": "",
+                "old": "5.4930899801532829e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/aov:swatch/ArnoldRenderSwatch:utility/aov",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiWriteInt"
+      },
+      "0x115d8d": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 13,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "eval11A": {
+              "default": {
+                "new": "",
+                "old": "8.3388469015041214e-41"
+              }
+            },
+            "eval12A": {
+              "default": {
+                "new": "",
+                "old": "true"
+              }
+            },
+            "eval16A": {
+              "default": {
+                "new": "",
+                "old": "true"
+              }
+            },
+            "eval18A": {
+              "default": {
+                "new": "",
+                "old": "8.3388469015041214e-41"
+              }
+            },
+            "eval19A": {
+              "default": {
+                "new": "",
+                "old": "true"
+              }
+            },
+            "eval20A": {
+              "default": {
+                "new": "",
+                "old": "true"
+              }
+            },
+            "eval2A": {
+              "default": {
+                "new": "",
+                "old": "8.3388469015041214e-41"
+              }
+            },
+            "eval3A": {
+              "default": {
+                "new": "",
+                "old": "8.3388469015041214e-41"
+              }
+            },
+            "eval4A": {
+              "default": {
+                "new": "",
+                "old": "8.3388469015041214e-41"
+              }
+            },
+            "eval5A": {
+              "default": {
+                "new": "",
+                "old": "8.3388469015041214e-41"
+              }
+            },
+            "eval6A": {
+              "default": {
+                "new": "",
+                "old": "8.3388469015041214e-41"
+              }
+            },
+            "eval8A": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "passthroughA": {
+              "default": {
+                "new": "",
+                "old": "4.5914945482066956e-41"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiPassthrough"
+      },
+      "0x115d90": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "enableAssignment": {
+              "default": {
+                "new": "1",
+                "old": ""
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "operator:rendernode/arnold/operator:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiSetParameter"
+      },
+      "0x115d94": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "passthroughA": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/shader:swatch/ArnoldRenderSwatch:utility/shader",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiTraceSet"
+      },
+      "0x115d9b": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 4,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "input1A": {
+              "default": {
+                "new": "",
+                "old": "8.3388469015041214e-41"
+              }
+            },
+            "input4A": {
+              "default": {
+                "new": "",
+                "old": "8.3388469015041214e-41"
+              }
+            },
+            "input7A": {
+              "default": {
+                "new": "",
+                "old": "8.3388469015041214e-41"
+              }
+            },
+            "input8A": {
+              "default": {
+                "new": "",
+                "old": "5.4930899801532829e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiLayerShader"
+      },
+      "0x115da2": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "radius": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/round_corners:rendernode/arnold/utility/shader:swatch/ArnoldRenderSwatch:utility/shader",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiRoundCorners"
+      },
+      "0x115da6": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "radius": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/shader:swatch/ArnoldRenderSwatch:utility/shader",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiRampRgb"
+      },
+      "0x115da7": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "radius": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/shader:swatch/ArnoldRenderSwatch:utility/shader",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiRampFloat"
+      },
+      "0x115dbe": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 3,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "subsurfaceRadius": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            },
+            "transmissionDepth": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            },
+            "transmissionShadowDensity": {
+              "default": {
+                "new": "0.5",
+                "old": ""
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/openpbr_surface:legacy:rendernode/arnold/legacy:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiOpenPBRSurface"
+      },
+      "0x115dc1": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 6,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "layerEnable": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "layerExposure": {
+              "default": {
+                "new": "4.5756343752145767e-05",
+                "old": "true"
+              }
+            },
+            "layerIntensity": {
+              "default": {
+                "new": "4.575622733682394e-05",
+                "old": "true"
+              }
+            },
+            "layerTintB": {
+              "default": {
+                "new": "",
+                "old": "1"
+              }
+            },
+            "layerTintG": {
+              "default": {
+                "new": "7.7912194616459829e-43",
+                "old": "5.4930899801532829e-43"
+              }
+            },
+            "layerTintR": {
+              "default": {
+                "new": "4.5756110921502113e-05",
+                "old": "true"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "imager:rendernode/arnold/imager:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiImagerLightMixer"
+      },
+      "0x118f91": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "radius": {
+              "type": {
+                "new": "doubleLinear",
+                "old": "float"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/texture:swatch/ArnoldRenderSwatch:texture",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiCurvature"
+      },
       "0x41425344": {
         "attribute_summary": {
           "added": 0,
@@ -722,6 +1689,35 @@
         },
         "plugin": "_default",
         "typeName": "addDL"
+      },
+      "0x4443414d": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "aiShutterCurveX": {
+              "default": {
+                "new": "4.5751337893307209e-05",
+                "old": "true"
+              }
+            },
+            "aiShutterCurveY": {
+              "default": {
+                "new": "7.7912194616459829e-43",
+                "old": "5.4930899801532829e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "camera:drawdb/geometry/camera",
+        "node_changes": {},
+        "plugin": "_default",
+        "typeName": "camera"
       },
       "0x44444254": {
         "attribute_summary": {
@@ -1376,6 +2372,29 @@
         "plugin": "_default",
         "typeName": "normalizeDL"
       },
+      "0x4f504253": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "aiTransmissionShadowDensity": {
+              "default": {
+                "new": "0.5",
+                "old": ""
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/openPBRSurface:shader/surface",
+        "node_changes": {},
+        "plugin": "_default",
+        "typeName": "openPBRSurface"
+      },
       "0x50424342": {
         "attribute_summary": {
           "added": 12,
@@ -1630,6 +2649,58 @@
         "plugin": "_default",
         "typeName": "smoothStepDL"
       },
+      "0x53524341": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "aiShutterCurveX": {
+              "default": {
+                "new": "4.5751337893307209e-05",
+                "old": "true"
+              }
+            },
+            "aiShutterCurveY": {
+              "default": {
+                "new": "7.7912194616459829e-43",
+                "old": "5.4930899801532829e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "camera:drawdb/geometry/stereoRigCamera",
+        "node_changes": {},
+        "plugin": "_default",
+        "typeName": "stereoRigCamera"
+      },
+      "0x53544453": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "aiTransmissionShadowDensity": {
+              "default": {
+                "new": "0.5",
+                "old": ""
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/standardSurface:shader/surface",
+        "node_changes": {},
+        "plugin": "_default",
+        "typeName": "standardSurface"
+      },
       "0x53554253": {
         "attribute_summary": {
           "added": 0,
@@ -1755,6 +2826,35 @@
         "plugin": "_default",
         "typeName": "truncateDL"
       },
+      "0x55465043": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "aiShutterCurveX": {
+              "default": {
+                "new": "4.5751337893307209e-05",
+                "old": "true"
+              }
+            },
+            "aiShutterCurveY": {
+              "default": {
+                "new": "7.7912194616459829e-43",
+                "old": "5.4930899801532829e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "camera:drawdb/subscene/ufe/drawShape",
+        "node_changes": {},
+        "plugin": "_default",
+        "typeName": "ufeProxyCameraShape"
+      },
       "0x564f4c4c": {
         "attribute_summary": {
           "added": 1,
@@ -1772,6 +2872,26 @@
         "node_changes": {},
         "plugin": "_default",
         "typeName": "volumeLight"
+      },
+      "0x58000095": {
+        "attribute_summary": {
+          "added": 1,
+          "changed": 0,
+          "removed": 1
+        },
+        "attributes": {
+          "added": [
+            "aiLegacyTranslation"
+          ],
+          "changed": {},
+          "removed": [
+            "aiHydra"
+          ]
+        },
+        "classification": "drawdb/subscene/vp2RenderDelegate/mayaUsdProxyShapeBase",
+        "node_changes": {},
+        "plugin": "mayaUsdPlugin.mll",
+        "typeName": "mayaUsdProxyShape"
       },
       "0x58000971": {
         "attribute_summary": {
@@ -1840,10 +2960,10 @@
   "previous_version": "2025",
   "summary": {
     "added": 60,
-    "changed": 59,
+    "changed": 91,
     "failed_new": 0,
     "failed_previous": 0,
     "removed": 1,
-    "unchanged": 1128
+    "unchanged": 1260
   }
 }

@@ -1,0 +1,745 @@
+
+.. index::
+    single: timeEditorTracks
+    single: 0x5445544b
+    single: category; animation; timeEditor
+
+_default - timeEditorTracks (0x5445544b)
+=======================================================================================================================================
+
+:classification:
+    
+    
+    animation/timeEditor
+    
+    
+
+:plugin:
+    (built-in)
+
+:id:
+    0x5445544b
+
+
+:link:
+    visit Autodesk Maya 2022 official reference `a link`_.
+
+.. _a link: https://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/Nodes/timeEditorTracks.html
+
+
+
+Attributes (33)
+--------------------------------------
+
+
+
+.. raw:: html
+
+    <table class="attribute">
+        <tbody>
+            <tr>
+                <th class="attr_name">Long name (short name)</th>
+                <th class="attr_type">Type</th>
+                <th class="attr_default">Value</th>
+                <th class="attr_minmax">Min/Max</th>
+                <th class="attr_flags">Flags</th>
+            </tr>
+            
+            
+            <tr>
+                <th colspan="5">external visible attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="clip">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">clip (c)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="clipTime">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">clipTime (ct)</span></td>
+                <td class="attr_type">time</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, out</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="composition">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">composition (cmp)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozen">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozen (fzn)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozenAffected">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozenAffected (fza)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="track">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">track (t)</span></td>
+                <td class="attr_type">compound</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="index">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">index (idx)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="trackColor">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">trackColor (tc)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent2 dotted" data-attr-name="trackColorB">
+    
+
+                <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">trackColorB (tcb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.21960000693798065</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent2 dotted" data-attr-name="trackColorG">
+    
+
+                <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">trackColorG (tcg)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.21960000693798065</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent2 last" data-attr-name="trackColorR">
+    
+
+                <td class="attr_name" style="text-indent: 8ex;"><span class="attr_label">trackColorR (tcr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.21960000693798065</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="trackGhost">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">trackGhost (tgh)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="trackHeight">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">trackHeight (th)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">32</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="trackMuted">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">trackMuted (tm)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="trackName">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">trackName (n)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="trackSolo">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">trackSolo (ts)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="trackSoloMute">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">trackSoloMute (tsm)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="type">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">type (typ)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Animation Track (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Audio Track (1)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="useTrackColor">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">useTrackColor (utc)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="muted">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">muted (m)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="parentTime">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">parentTime (ptm)</span></td>
+                <td class="attr_type">time</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="state">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">state (st)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">external hidden attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="clipchanged">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">clipchanged (clch)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">hidden, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="isHistoricallyInteresting">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">isHistoricallyInteresting (ihi)</span></td>
+                <td class="attr_type">byte</td>
+                <td class="attr_value">
+                    <div class="attr_current">2</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/255</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="message">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">message (msg)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, hidden, out</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">internal attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="binMembership">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">binMembership (bnm)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">hidden, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="caching">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">caching (cch)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="crossfade">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">crossfade (cr)</span></td>
+                <td class="attr_type">compound</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="crossfadeClipId1">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">crossfadeClipId1 (cid1)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="crossfadeClipId2">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">crossfadeClipId2 (cid2)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="crossfadeCurve">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">crossfadeCurve (cc)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="crossfadeMode">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">crossfadeMode (cm)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Linear (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Step (1)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Hold Left (2)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Hold Right (3)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Custom (4)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/4</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="nodeState">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">nodeState (nds)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Normal (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            HasNoEffect (1)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Blocking (2)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Normal (8)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-HasNoEffect (9)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Blocking (10)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/10</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+            
+        </tbody>
+    </table>
+

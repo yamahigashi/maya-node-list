@@ -1,0 +1,1214 @@
+
+.. index::
+    single: aiVolumeCollector
+    single: 0x115d1f
+    single: category; drawdb; shader; surface; arnold; genericShader
+    single: category; legacy
+    single: category; rendernode; arnold; legacy
+    single: category; swatch; ArnoldRenderSwatch
+
+mtoa.mll - aiVolumeCollector (0x115d1f)
+=======================================================================================================================================
+
+:classification:
+    
+    
+    drawdb/shader/surface/arnold/genericShader
+    
+    legacy
+    
+    rendernode/arnold/legacy
+    
+    swatch/ArnoldRenderSwatch
+    
+    
+
+:plugin:
+    C:/Program Files/Autodesk/Arnold/maya2022/plug-ins/mtoa.mll
+
+:id:
+    0x115d1f
+
+
+
+
+Attributes (56)
+--------------------------------------
+
+
+
+.. raw:: html
+
+    <table class="attribute">
+        <tbody>
+            <tr>
+                <th class="attr_name">Long name (short name)</th>
+                <th class="attr_type">Type</th>
+                <th class="attr_default">Value</th>
+                <th class="attr_minmax">Min/Max</th>
+                <th class="attr_flags">Flags</th>
+            </tr>
+            
+            
+            <tr>
+                <th colspan="5">external visible attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="anisotropy">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">anisotropy (anisotropy)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="attenuation">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">attenuation (attenuation)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="attenuationB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">attenuationB (attenuationb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="attenuationG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">attenuationG (attenuationg)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="attenuationR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">attenuationR (attenuationr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="attenuationChannel">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">attenuationChannel (attenuation_channel)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="attenuationColor">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">attenuationColor (attenuation_color)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="attenuationColorB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">attenuationColorB (attenuation_colorb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="attenuationColorG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">attenuationColorG (attenuation_colorg)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="attenuationColorR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">attenuationColorR (attenuation_colorr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="attenuationIntensity">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">attenuationIntensity (attenuation_intensity)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="attenuationMode">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">attenuationMode (attenuation_mode)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            absorption (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            extinction (1)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="attenuationSource">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">attenuationSource (attenuation_source)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            parameter (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            channel (1)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            scattering (2)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/2</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="emission">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">emission (emission)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="emissionB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">emissionB (emissionb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="emissionG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">emissionG (emissiong)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="emissionR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">emissionR (emissionr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="emissionChannel">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">emissionChannel (emission_channel)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="emissionColor">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">emissionColor (emission_color)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="emissionColorB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">emissionColorB (emission_colorb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="emissionColorG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">emissionColorG (emission_colorg)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="emissionColorR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">emissionColorR (emission_colorr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="emissionIntensity">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">emissionIntensity (emission_intensity)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="emissionSource">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">emissionSource (emission_source)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            parameter (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            channel (1)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozen">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozen (fzn)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozenAffected">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozenAffected (fza)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="interpolation">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">interpolation (interpolation)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            closest (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item default">
+                            trilinear (1)
+                            
+                            <span class="enum_default">(default)</span>
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            tricubic (2)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/2</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="outAlpha">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outAlpha (outa)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="outColor">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outColor (out)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="outColorB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outColorB (outb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="outColorG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outColorG (outg)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="outColorR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outColorR (outr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="outTransparency">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outTransparency (ot)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="outTransparencyB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outTransparencyB (otb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="outTransparencyG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outTransparencyG (otg)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="outTransparencyR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outTransparencyR (otr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="positionOffset">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">positionOffset (position_offset)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="positionOffsetX">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">positionOffsetX (position_offsetx)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="positionOffsetY">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">positionOffsetY (position_offsety)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="positionOffsetZ">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">positionOffsetZ (position_offsetz)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="scattering">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">scattering (scattering)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="scatteringB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">scatteringB (scatteringb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="scatteringG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">scatteringG (scatteringg)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="scatteringR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">scatteringR (scatteringr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="scatteringChannel">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">scatteringChannel (scattering_channel)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="scatteringColor">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">scatteringColor (scattering_color)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="scatteringColorB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">scatteringColorB (scattering_colorb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="scatteringColorG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">scatteringColorG (scattering_colorg)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="scatteringColorR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">scatteringColorR (scattering_colorr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="scatteringIntensity">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">scatteringIntensity (scattering_intensity)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="scatteringSource">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">scatteringSource (scattering_source)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            parameter (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            channel (1)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">external hidden attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="isHistoricallyInteresting">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">isHistoricallyInteresting (ihi)</span></td>
+                <td class="attr_type">byte</td>
+                <td class="attr_value">
+                    <div class="attr_current">2</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/255</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="message">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">message (msg)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, hidden, out</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">internal attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="binMembership">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">binMembership (bnm)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">hidden, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="caching">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">caching (cch)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="nodeState">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">nodeState (nds)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Normal (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            HasNoEffect (1)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Blocking (2)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Normal (8)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-HasNoEffect (9)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Blocking (10)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/10</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+            
+        </tbody>
+    </table>
+

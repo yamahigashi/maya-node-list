@@ -23,7 +23,7 @@ xgenToolkit.mll - xgmDescription (0x58000306)
 
 
 
-Attributes (216)
+Attributes (239)
 --------------------------------------
 
 
@@ -43,6 +43,110 @@ Attributes (216)
             <tr>
                 <th colspan="5">channel box</th>
             </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiAuxRenderPatch">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiAuxRenderPatch (ai_batch_render_patch)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiMinPixelWidth">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiMinPixelWidth (ai_min_pixel_width)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiMode">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiMode (ai_mode)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Ribbon (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Thick (1)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiMultithreading">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiMultithreading (ai_multithreading)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiUseAuxRenderPatch">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiUseAuxRenderPatch (ai_use_aux_render_patch)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
             
                 
     
@@ -312,6 +416,140 @@ Attributes (216)
             
                 
     
+            <tr class="indent0" data-attr-name="motionBlurFactor">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurFactor (motion_blur_factor)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="motionBlurMode">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurMode (motion_blur_mode)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">3</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Start On Frame (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Center On Frame (1)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            End On Frame (2)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item default">
+                            Use RenderGlobals (3)
+                            
+                            <span class="enum_default">(default)</span>
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/3</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="motionBlurMult">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurMult (motion_blur_mult)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="motionBlurOverride">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurOverride (motion_blur_override)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="motionBlurSteps">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">motionBlurSteps (motion_blur_steps)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">3</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="renderMode">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">renderMode (render_mode)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
             <tr class="parent indent0 dotted" data-attr-name="uvSet">
     
 
@@ -445,6 +683,222 @@ Attributes (216)
             <tr>
                 <th colspan="5">external visible attributes</th>
             </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiMatte">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiMatte (ai_matte)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiOpaque">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiOpaque (ai_opaque)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiSelfShadows">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiSelfShadows (ai_self_shadows)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiSssSetname">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiSssSetname (ai_sss_setname)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiToonId">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiToonId (ai_toon_id)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiTraceSets">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiTraceSets (trace_sets)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiUserOptions">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiUserOptions (ai_user_options)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiVisibleInDiffuseReflection">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiVisibleInDiffuseReflection (ai_vidr)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiVisibleInDiffuseTransmission">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiVisibleInDiffuseTransmission (ai_vidt)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiVisibleInSpecularReflection">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiVisibleInSpecularReflection (ai_visr)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiVisibleInSpecularTransmission">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiVisibleInSpecularTransmission (ai_vist)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiVisibleInVolume">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiVisibleInVolume (ai_viv)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
             
                 
     

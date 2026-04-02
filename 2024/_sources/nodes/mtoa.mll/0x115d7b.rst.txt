@@ -1,0 +1,2409 @@
+
+.. index::
+    single: aiSwitch
+    single: 0x115d7b
+    single: category; drawdb; shader; surface; arnold; genericShader
+    single: category; rendernode; arnold; shader; surface
+    single: category; shader; surface
+    single: category; swatch; ArnoldRenderSwatch
+
+mtoa.mll - aiSwitch (0x115d7b)
+=======================================================================================================================================
+
+:classification:
+    
+    
+    drawdb/shader/surface/arnold/genericShader
+    
+    rendernode/arnold/shader/surface
+    
+    shader/surface
+    
+    swatch/ArnoldRenderSwatch
+    
+    
+
+:plugin:
+    C:/Program Files/Autodesk/Arnold/maya2024/plug-ins/mtoa.mll
+
+:id:
+    0x115d7b
+
+
+
+
+Attributes (125)
+--------------------------------------
+
+
+
+.. raw:: html
+
+    <table class="attribute">
+        <tbody>
+            <tr>
+                <th class="attr_name">Long name (short name)</th>
+                <th class="attr_type">Type</th>
+                <th class="attr_default">Value</th>
+                <th class="attr_minmax">Min/Max</th>
+                <th class="attr_flags">Flags</th>
+            </tr>
+            
+            <tr>
+                <th colspan="5">channel box</th>
+            </tr>
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="hardwareColor">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">hardwareColor (hwc)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="hardwareColorB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">hardwareColorB (hwcb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.5</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="hardwareColorG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">hardwareColorG (hwcg)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.5</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="hardwareColorR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">hardwareColorR (hwcr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.5</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="normalCamera">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">normalCamera (n)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="normalCameraX">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">normalCameraX (nx)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="normalCameraY">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">normalCameraY (ny)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="normalCameraZ">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">normalCameraZ (nz)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+    
+
+            
+            
+            
+            <tr>
+                <th colspan="5">external visible attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozen">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozen (fzn)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozenAffected">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozenAffected (fza)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="index">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">index (index)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/19</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input0">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input0 (input0)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input0B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input0B (input0b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input0G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input0G (input0g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input0R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input0R (input0r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input1">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input1 (input1)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input1B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input1B (input1b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input1G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input1G (input1g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input1R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input1R (input1r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input10">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input10 (input10)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input10B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input10B (input10b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input10G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input10G (input10g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input10R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input10R (input10r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input11">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input11 (input11)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input11B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input11B (input11b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input11G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input11G (input11g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input11R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input11R (input11r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input12">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input12 (input12)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input12B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input12B (input12b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input12G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input12G (input12g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input12R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input12R (input12r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input13">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input13 (input13)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input13B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input13B (input13b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input13G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input13G (input13g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input13R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input13R (input13r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input14">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input14 (input14)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input14B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input14B (input14b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input14G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input14G (input14g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input14R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input14R (input14r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input15">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input15 (input15)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input15B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input15B (input15b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input15G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input15G (input15g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input15R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input15R (input15r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input16">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input16 (input16)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input16B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input16B (input16b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input16G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input16G (input16g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input16R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input16R (input16r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input17">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input17 (input17)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input17B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input17B (input17b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input17G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input17G (input17g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input17R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input17R (input17r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input18">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input18 (input18)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input18B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input18B (input18b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input18G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input18G (input18g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input18R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input18R (input18r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input19">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input19 (input19)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input19B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input19B (input19b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input19G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input19G (input19g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input19R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input19R (input19r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input2">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input2 (input2)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input2B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input2B (input2b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input2G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input2G (input2g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input2R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input2R (input2r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input3">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input3 (input3)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input3B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input3B (input3b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input3G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input3G (input3g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input3R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input3R (input3r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input4">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input4 (input4)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input4B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input4B (input4b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input4G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input4G (input4g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input4R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input4R (input4r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input5">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input5 (input5)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input5B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input5B (input5b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input5G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input5G (input5g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input5R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input5R (input5r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input6">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input6 (input6)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input6B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input6B (input6b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input6G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input6G (input6g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input6R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input6R (input6r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input7">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input7 (input7)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input7B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input7B (input7b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input7G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input7G (input7g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input7R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input7R (input7r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input8">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input8 (input8)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input8B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input8B (input8b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input8G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input8G (input8g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input8R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input8R (input8r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="input9">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input9 (input9)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input9B">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input9B (input9b)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="input9G">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input9G (input9g)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="input9R">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">input9R (input9r)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="outAlpha">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outAlpha (outa)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="outColor">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outColor (out)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="outColorB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outColorB (outb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.5</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="outColorG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outColorG (outg)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.5</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="outColorR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outColorR (outr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.5</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="outTransparency">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outTransparency (ot)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="outTransparencyB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outTransparencyB (otb)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.5</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="outTransparencyG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outTransparencyG (otg)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.5</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="outTransparencyR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outTransparencyR (otr)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.5</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+
+            
+            
+            
+            <tr>
+                <th colspan="5">external hidden attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="input0A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input0A (input0a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input10A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input10A (input10a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input11A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input11A (input11a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input12A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input12A (input12a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input13A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input13A (input13a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input14A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input14A (input14a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input15A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input15A (input15a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input16A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input16A (input16a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input17A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input17A (input17a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input18A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input18A (input18a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input19A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input19A (input19a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input1A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input1A (input1a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input2A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input2A (input2a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input3A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input3A (input3a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input4A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input4A (input4a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input5A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input5A (input5a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input6A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input6A (input6a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input7A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input7A (input7a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input8A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input8A (input8a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="input9A">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">input9A (input9a)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="isHistoricallyInteresting">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">isHistoricallyInteresting (ihi)</span></td>
+                <td class="attr_type">byte</td>
+                <td class="attr_value">
+                    <div class="attr_current">2</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/255</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="message">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">message (msg)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, hidden, out</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">internal attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="binMembership">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">binMembership (bnm)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">hidden, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="caching">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">caching (cch)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="nodeState">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">nodeState (nds)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Normal (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            HasNoEffect (1)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Blocking (2)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Normal (8)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-HasNoEffect (9)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Blocking (10)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/10</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+            
+        </tbody>
+    </table>
+

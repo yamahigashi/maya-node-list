@@ -1,0 +1,428 @@
+
+.. index::
+    single: hsvToRgb
+    single: 0x52483252
+    single: category; drawdb; shader; operation; hsvToRgb
+    single: category; utility; color
+
+_default - hsvToRgb (0x52483252)
+=======================================================================================================================================
+
+:classification:
+    
+    
+    drawdb/shader/operation/hsvToRgb
+    
+    utility/color
+    
+    
+
+:plugin:
+    (built-in)
+
+:id:
+    0x52483252
+
+
+:link:
+    visit Autodesk Maya 2022 official reference `a link`_.
+
+.. _a link: https://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/Nodes/hsvToRgb.html
+
+
+
+Attributes (16)
+--------------------------------------
+
+
+
+.. raw:: html
+
+    <table class="attribute">
+        <tbody>
+            <tr>
+                <th class="attr_name">Long name (short name)</th>
+                <th class="attr_type">Type</th>
+                <th class="attr_default">Value</th>
+                <th class="attr_minmax">Min/Max</th>
+                <th class="attr_flags">Flags</th>
+            </tr>
+            
+            <tr>
+                <th colspan="5">channel box</th>
+            </tr>
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="inHsv">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">inHsv (i)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="inHsvB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">inHsvB (ib)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="inHsvG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">inHsvG (ig)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="inHsvR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">inHsvR (ir)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/360</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+    
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="renderPassMode">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">renderPassMode (arp)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Pass through (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item default">
+                            Apply to Render Passes (1)
+                            
+                            <span class="enum_default">(default)</span>
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            No Contribution (2)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Write Shader Result to Beauty Passes (3)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/3</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">external visible attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozen">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozen (fzn)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozenAffected">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozenAffected (fza)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="parent indent0 dotted" data-attr-name="outRgb">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">outRgb (o)</span></td>
+                <td class="attr_type">float3</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="outRgbB">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outRgbB (ob)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 dotted" data-attr-name="outRgbG">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outRgbG (og)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+                
+    
+            <tr class="child indent1 last" data-attr-name="outRgbR">
+    
+
+                <td class="attr_name" style="text-indent: 4ex;"><span class="attr_label">outRgbR (or)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, out</td>
+            </tr>
+
+
+    
+
+            
+            
+            
+            <tr>
+                <th colspan="5">external hidden attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="isHistoricallyInteresting">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">isHistoricallyInteresting (ihi)</span></td>
+                <td class="attr_type">byte</td>
+                <td class="attr_value">
+                    <div class="attr_current">2</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/255</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="message">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">message (msg)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, hidden, out</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">internal attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="binMembership">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">binMembership (bnm)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">hidden, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="caching">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">caching (cch)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="nodeState">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">nodeState (nds)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Normal (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            HasNoEffect (1)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Blocking (2)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Normal (8)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-HasNoEffect (9)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Blocking (10)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/10</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+            
+        </tbody>
+    </table>
+

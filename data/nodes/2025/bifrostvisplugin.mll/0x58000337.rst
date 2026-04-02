@@ -23,7 +23,7 @@ bifrostvisplugin.mll - bifrostShape (0x58000337)
 
 
 
-Attributes (350)
+Attributes (363)
 --------------------------------------
 
 
@@ -43,6 +43,24 @@ Attributes (350)
             <tr>
                 <th colspan="5">channel box</th>
             </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="chunkSize">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">chunkSize (chunk_size)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">100000</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">1/-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
             
                 
     
@@ -348,6 +366,60 @@ Attributes (350)
             
                 
     
+            <tr class="indent0" data-attr-name="implicitSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">implicitSamples (implicit_samples)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">4</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">1/-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="implicitStepSize">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">implicitStepSize (implicit_step_size)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.02500000037252903</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="matte">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">matte (matte)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
             <tr class="indent0" data-attr-name="maxParticleDisplayCount">
     
 
@@ -638,6 +710,24 @@ Attributes (350)
             
                 
     
+            <tr class="indent0" data-attr-name="opaque">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">opaque (opaque)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
             <tr class="indent0" data-attr-name="particleMaxLevel">
     
 
@@ -742,6 +832,58 @@ Attributes (350)
             
                 
     
+            <tr class="indent0" data-attr-name="pointsStepSize">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">pointsStepSize (points_step_size)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.02500000037252903</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="pointsType">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">pointsType (points_type)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Points (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item default">
+                            Spheres (1)
+                            
+                            <span class="enum_default">(default)</span>
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
             <tr class="indent0" data-attr-name="scaleParticleVector">
     
 
@@ -796,6 +938,24 @@ Attributes (350)
             
                 
     
+            <tr class="indent0" data-attr-name="smoothing">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">smoothing (smoothing)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
             <tr class="indent0" data-attr-name="sphereRadius">
     
 
@@ -808,6 +968,74 @@ Attributes (350)
                 </td>
                 <td class="attr_minmax">0/-</td>
                 <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="subdivisions">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">subdivisions (subdivisions)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">1/-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="surfaceType">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">surfaceType (surface_type)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Mesh (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Implicit (1)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="tileMode">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">tileMode (tile_mode)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
             </tr>
 
 
@@ -1052,6 +1280,24 @@ Attributes (350)
             
                 
     
+            <tr class="indent0" data-attr-name="volumeStepSize">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">volumeStepSize (volume_step_size)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.02500000037252903</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/-</td>
+                <td class="attr_flags">connectable, extension, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
             <tr class="indent0" data-attr-name="voxels">
     
 
@@ -1073,6 +1319,24 @@ Attributes (350)
             <tr>
                 <th colspan="5">external visible attributes</th>
             </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="aiUserOptions">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">aiUserOptions (ai_user_options)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, extension, in, out, storable</td>
+            </tr>
+
+
             
                 
     

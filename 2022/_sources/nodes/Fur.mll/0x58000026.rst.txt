@@ -1,0 +1,1319 @@
+
+.. index::
+    single: FurCurveAttractors
+    single: 0x58000026
+
+Fur.mll - FurCurveAttractors (0x58000026)
+=======================================================================================================================================
+
+:classification:
+    
+    (none)
+    
+
+:plugin:
+    C:/Program Files/Autodesk/Maya2022/bin/plug-ins/Fur.mll
+
+:id:
+    0x58000026
+
+
+
+
+Attributes (67)
+--------------------------------------
+
+
+
+.. raw:: html
+
+    <table class="attribute">
+        <tbody>
+            <tr>
+                <th class="attr_name">Long name (short name)</th>
+                <th class="attr_type">Type</th>
+                <th class="attr_default">Value</th>
+                <th class="attr_minmax">Min/Max</th>
+                <th class="attr_flags">Flags</th>
+            </tr>
+            
+            <tr>
+                <th colspan="5">channel box</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveAttractorsPerHair">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveAttractorsPerHair (caph)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">keyable, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveEndLength">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveEndLength (dcel)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">5</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/100000</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveGlobalScale">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveGlobalScale (cgs)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">keyable, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveInfluence">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveInfluence (dci)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/100000</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurvePower">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurvePower (dcp)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveRadius">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveRadius (dcr)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">10</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/100000</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveStartLength">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveStartLength (dcsl)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/100000</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveThresholdLength">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveThresholdLength (dctl)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">0.33</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/100000</td>
+                <td class="attr_flags">connectable, in, keyable, out, storable</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">external visible attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveAttractorModel">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveAttractorModel (camd)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Local (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Global (1)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveEndLengthMap">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveEndLengthMap (celm)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveEndLengthMapFile">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveEndLengthMapFile (celmt)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveEndLengthMapMult">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveEndLengthMapMult (celmm)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveEndLengthMapOffset">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveEndLengthMapOffset (celmo)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveEndLengthNoise">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveEndLengthNoise (celn)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1000000</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveEndLengthNoiseFreq">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveEndLengthNoiseFreq (celnf)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">10</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/100000</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveInfluenceMap">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveInfluenceMap (cim)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveInfluenceMapFile">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveInfluenceMapFile (cimt)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveInfluenceMapMult">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveInfluenceMapMult (cimm)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveInfluenceMapOffset">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveInfluenceMapOffset (cimo)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveInfluenceNoise">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveInfluenceNoise (cin)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1000000</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveInfluenceNoiseFreq">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveInfluenceNoiseFreq (cinf)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">10</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/100000</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurvePowerMap">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurvePowerMap (cpm)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurvePowerMapFile">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurvePowerMapFile (cpmt)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurvePowerMapMult">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurvePowerMapMult (cpmm)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurvePowerMapOffset">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurvePowerMapOffset (cpmo)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurvePowerNoise">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurvePowerNoise (cpn)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/10</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurvePowerNoiseFreq">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurvePowerNoiseFreq (cpnf)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">10</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/100000</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveRadiusMap">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveRadiusMap (crm)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveRadiusMapFile">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveRadiusMapFile (crmt)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveRadiusMapMult">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveRadiusMapMult (crmm)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveRadiusMapOffset">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveRadiusMapOffset (crmo)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveRadiusNoise">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveRadiusNoise (crn)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1000000</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveRadiusNoiseFreq">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveRadiusNoiseFreq (crnf)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">10</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/100000</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveStartLengthMap">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveStartLengthMap (cslm)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveStartLengthMapFile">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveStartLengthMapFile (cslmt)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveStartLengthMapMult">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveStartLengthMapMult (cslmm)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveStartLengthMapOffset">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveStartLengthMapOffset (cslmo)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveStartLengthNoise">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveStartLengthNoise (csln)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1000000</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveStartLengthNoiseFreq">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveStartLengthNoiseFreq (cslnf)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">10</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/100000</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveThresholdLengthMap">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveThresholdLengthMap (ctlm)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveThresholdLengthMapFile">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveThresholdLengthMapFile (ctlmt)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">array, connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveThresholdLengthMapMult">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveThresholdLengthMapMult (ctlmm)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">1</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveThresholdLengthMapOffset">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveThresholdLengthMapOffset (ctlmo)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveThresholdLengthNoise">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveThresholdLengthNoise (ctln)</span></td>
+                <td class="attr_type">doubleLinear</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1000000</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveThresholdLengthNoiseFreq">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveThresholdLengthNoiseFreq (ctlnf)</span></td>
+                <td class="attr_type">float</td>
+                <td class="attr_value">
+                    <div class="attr_current">10</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/100000</td>
+                <td class="attr_flags">storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="curveAttractors">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">curveAttractors (catt)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="dagSetMembers">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">dagSetMembers (dsm)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, in</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozen">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozen (fzn)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="frozenAffected">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">frozenAffected (fza)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, extension, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="furGlobals">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">furGlobals (fgc)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, in</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">external hidden attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveEndLengthMapUSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveEndLengthMapUSamples (celmus)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveEndLengthMapVSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveEndLengthMapVSamples (celmvs)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveInfluenceMapUSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveInfluenceMapUSamples (cimus)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveInfluenceMapVSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveInfluenceMapVSamples (cimvs)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurvePowerMapUSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurvePowerMapUSamples (cpmus)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurvePowerMapVSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurvePowerMapVSamples (cpmvs)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveRadiusMapUSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveRadiusMapUSamples (crmus)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveRadiusMapVSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveRadiusMapVSamples (crmvs)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveStartLengthMapUSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveStartLengthMapUSamples (cslmus)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveStartLengthMapVSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveStartLengthMapVSamples (cslmvs)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveThresholdLengthMapUSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveThresholdLengthMapUSamples (ctlmus)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="CurveThresholdLengthMapVSamples">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">CurveThresholdLengthMapVSamples (ctlmvs)</span></td>
+                <td class="attr_type">long</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">array, connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="isHistoricallyInteresting">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">isHistoricallyInteresting (ihi)</span></td>
+                <td class="attr_type">byte</td>
+                <td class="attr_value">
+                    <div class="attr_current">2</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/255</td>
+                <td class="attr_flags">connectable, hidden, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="message">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">message (msg)</span></td>
+                <td class="attr_type">message</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">connectable, hidden, out</td>
+            </tr>
+
+
+            
+            
+            
+            <tr>
+                <th colspan="5">internal attributes</th>
+            </tr>
+            
+                
+    
+            <tr class="indent0" data-attr-name="binMembership">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">binMembership (bnm)</span></td>
+                <td class="attr_type">-</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">-</td>
+                <td class="attr_flags">hidden, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="caching">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">caching (cch)</span></td>
+                <td class="attr_type">bool</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/1</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+                
+    
+            <tr class="indent0" data-attr-name="nodeState">
+    
+
+                <td class="attr_name" style="text-indent: 0ex;"><span class="attr_label">nodeState (nds)</span></td>
+                <td class="attr_type">enum</td>
+                <td class="attr_value">
+                    <div class="attr_current">-</div>
+                    
+                    <ul class="attr_enum_list">
+                    
+                        <li class="attr_enum_item">
+                            Normal (0)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            HasNoEffect (1)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Blocking (2)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Normal (8)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-HasNoEffect (9)
+                            
+                        </li>
+                    
+                        <li class="attr_enum_item">
+                            Waiting-Blocking (10)
+                            
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                </td>
+                <td class="attr_minmax">0/10</td>
+                <td class="attr_flags">connectable, in, out, storable</td>
+            </tr>
+
+
+            
+            
+        </tbody>
+    </table>
+

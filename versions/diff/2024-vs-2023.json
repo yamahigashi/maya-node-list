@@ -1,8 +1,13 @@
 {
-  "generated_at_utc": "2026-04-02T11:42:36.011006Z",
+  "generated_at_utc": "2026-04-02T13:01:56.125652Z",
   "new_version": "2024",
   "node_diff": {
     "added_nodes": [
+      {
+        "plugin": "mtoa.mll",
+        "typeId": "0x115d22",
+        "typeName": "aiDistance"
+      },
       {
         "plugin": "substancemaya.mll",
         "typeId": "0x1305c0",
@@ -300,6 +305,7 @@
       }
     ],
     "added_type_ids": [
+      "0x115d22",
       "0x1305c0",
       "0x1305c1",
       "0x345dad01",
@@ -1029,6 +1035,1829 @@
         "node_changes": {},
         "plugin": "MayaMuscle.mll",
         "typeName": "cMuscleRelative"
+      },
+      "0x115c00": {
+        "attribute_summary": {
+          "added": 3,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [
+            "globalLightSamplesEnabled",
+            "lightSamples",
+            "textureAutoTxPath"
+          ],
+          "changed": {
+            "threads": {
+              "max": {
+                "new": "1024",
+                "old": "256"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiOptions"
+      },
+      "0x115c03": {
+        "attribute_summary": {
+          "added": 2,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [
+            "pngSkipAlpha",
+            "pngUnpremultAlpha"
+          ],
+          "changed": {
+            "aiTranslator": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "layerTolerance": {
+              "default": {
+                "new": "1.4490995575398652e-39",
+                "old": "true"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiAOVDriver"
+      },
+      "0x115c04": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "aiTranslator": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "out",
+                  "storable"
+                ]
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiAOVFilter"
+      },
+      "0x115c05": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 8,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "aiVisibleInDiffuseReflection": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "aiVisibleInDiffuseTransmission": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "aiVisibleInSpecularReflection": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "aiVisibleInSpecularTransmission": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "aiVisibleInVolume": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "castsShadows": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "primaryVisibility": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "receiveShadows": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/geometry/arnold/volume",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiVolume"
+      },
+      "0x115d11": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "beautyA": {
+              "default": {
+                "new": "",
+                "old": "7.0205053062673335e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/aov:swatch/ArnoldRenderSwatch:utility/aov",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiWriteFloat"
+      },
+      "0x115d17": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "colorSpace": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/image:rendernode/arnold/texture:swatch/ArnoldRenderSwatch:texture",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiImage"
+      },
+      "0x115d1e": {
+        "attribute_summary": {
+          "added": 1,
+          "changed": 0,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [
+            "enableSky"
+          ],
+          "changed": {},
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/texture/environment:swatch/ArnoldRenderSwatch:texture/environment",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiPhysicalSky"
+      },
+      "0x115d51": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "coatRotation": {
+              "max": {
+                "new": "1",
+                "old": ""
+              },
+              "min": {
+                "new": "0",
+                "old": ""
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/standard_surface:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiStandardSurface"
+      },
+      "0x115d54": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "shader1A": {
+              "default": {
+                "new": "4.5914945482066956e-41",
+                "old": "8.0961420074830631e-41"
+              }
+            },
+            "shader2A": {
+              "default": {
+                "new": "4.5914945482066956e-41",
+                "old": "8.0961420074830631e-41"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiMixShader"
+      },
+      "0x115d55": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 35,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "camera": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "cameraA": {
+              "default": {
+                "new": "4.5914945482066956e-41",
+                "old": ""
+              },
+              "flags": {
+                "new": [
+                  "connectable",
+                  "hidden",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "hidden",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "cameraB": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "cameraG": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "cameraR": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "diffuseReflection": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "diffuseReflectionA": {
+              "default": {
+                "new": "1",
+                "old": ""
+              },
+              "flags": {
+                "new": [
+                  "connectable",
+                  "hidden",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "hidden",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "diffuseReflectionB": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "diffuseReflectionG": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "diffuseReflectionR": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "diffuseTransmission": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "diffuseTransmissionA": {
+              "default": {
+                "new": "1",
+                "old": ""
+              },
+              "flags": {
+                "new": [
+                  "connectable",
+                  "hidden",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "hidden",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "diffuseTransmissionB": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "diffuseTransmissionG": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "diffuseTransmissionR": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "shadow": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "shadowA": {
+              "default": {
+                "new": "1",
+                "old": ""
+              },
+              "flags": {
+                "new": [
+                  "connectable",
+                  "hidden",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "hidden",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "shadowB": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "shadowG": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "shadowR": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "specularReflection": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "specularReflectionA": {
+              "default": {
+                "new": "1",
+                "old": ""
+              },
+              "flags": {
+                "new": [
+                  "connectable",
+                  "hidden",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "hidden",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "specularReflectionB": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "specularReflectionG": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "specularReflectionR": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "specularTransmission": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "specularTransmissionA": {
+              "default": {
+                "new": "1",
+                "old": ""
+              },
+              "flags": {
+                "new": [
+                  "connectable",
+                  "hidden",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "hidden",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "specularTransmissionB": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "specularTransmissionG": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "specularTransmissionR": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "volume": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "volumeA": {
+              "default": {
+                "new": "1",
+                "old": ""
+              },
+              "flags": {
+                "new": [
+                  "connectable",
+                  "hidden",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "hidden",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "volumeB": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "volumeG": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "volumeR": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiRaySwitch"
+      },
+      "0x115d56": {
+        "attribute_summary": {
+          "added": 2,
+          "changed": 0,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [
+            "aiUserOptions",
+            "codeCache"
+          ],
+          "changed": {},
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/shader:swatch/ArnoldRenderSwatch:utility/shader",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiOslShader"
+      },
+      "0x115d59": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "backA": {
+              "default": {
+                "new": "",
+                "old": "4.5914945482066956e-41"
+              }
+            },
+            "frontA": {
+              "default": {
+                "new": "1",
+                "old": "4.5914945482066956e-41"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiTwoSided"
+      },
+      "0x115d7b": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 20,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "input0A": {
+              "default": {
+                "new": "1",
+                "old": "8.0961420074830631e-41"
+              }
+            },
+            "input10A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input11A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input12A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input13A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input14A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input15A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input16A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input17A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input18A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input19A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input1A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input2A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input3A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input4A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input5A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input6A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input7A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input8A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input9A": {
+              "default": {
+                "new": "1",
+                "old": "7.0205053062673335e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiSwitch"
+      },
+      "0x115d7d": {
+        "attribute_summary": {
+          "added": 6,
+          "changed": 0,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [
+            "uvcoords",
+            "uvcoordsX",
+            "uvcoordsY",
+            "uvcoordsZ",
+            "uvwMatrix",
+            "wset"
+          ],
+          "changed": {},
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/shader:swatch/ArnoldRenderSwatch:utility/shader",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiUvTransform"
+      },
+      "0x115d87": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "beautyA": {
+              "default": {
+                "new": "6.8803754598348518e-43",
+                "old": "4.5914945482066956e-41"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/aov:swatch/ArnoldRenderSwatch:utility/aov",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiWriteInt"
+      },
+      "0x115d8d": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 21,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "eval10A": {
+              "default": {
+                "new": "",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval11A": {
+              "default": {
+                "new": "5.1497718563937027e-42",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval12A": {
+              "default": {
+                "new": "true",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval13A": {
+              "default": {
+                "new": "",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval14A": {
+              "default": {
+                "new": "1.7656360650492695e-43",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval15A": {
+              "default": {
+                "new": "",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval16A": {
+              "default": {
+                "new": "true",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval17A": {
+              "default": {
+                "new": "",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval18A": {
+              "default": {
+                "new": "5.1497718563937027e-42",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval19A": {
+              "default": {
+                "new": "true",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval1A": {
+              "default": {
+                "new": "",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval20A": {
+              "default": {
+                "new": "true",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval2A": {
+              "default": {
+                "new": "5.1497718563937027e-42",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval3A": {
+              "default": {
+                "new": "5.1497718563937027e-42",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval4A": {
+              "default": {
+                "new": "5.1497718563937027e-42",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval5A": {
+              "default": {
+                "new": "5.1497718563937027e-42",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval6A": {
+              "default": {
+                "new": "5.1497718563937027e-42",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval7A": {
+              "default": {
+                "new": "",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval8A": {
+              "default": {
+                "new": "1",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "eval9A": {
+              "default": {
+                "new": "",
+                "old": "1.1630777253895982e-43"
+              }
+            },
+            "passthroughA": {
+              "default": {
+                "new": "4.5914945482066956e-41",
+                "old": "1.1630777253895982e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiPassthrough"
+      },
+      "0x115d91": {
+        "attribute_summary": {
+          "added": 17,
+          "changed": 0,
+          "removed": 4
+        },
+        "attributes": {
+          "added": [
+            "Rl",
+            "area",
+            "bu",
+            "bv",
+            "dudx",
+            "dudy",
+            "dvdx",
+            "dvdy",
+            "px",
+            "py",
+            "shutter_end",
+            "shutter_start",
+            "sx",
+            "sy",
+            "time",
+            "u",
+            "v"
+          ],
+          "changed": {},
+          "removed": [
+            "outTransparency",
+            "outTransparencyB",
+            "outTransparencyG",
+            "outTransparencyR"
+          ]
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/shader:swatch/ArnoldRenderSwatch:utility/shader",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiStateFloat"
+      },
+      "0x115d92": {
+        "attribute_summary": {
+          "added": 18,
+          "changed": 0,
+          "removed": 4
+        },
+        "attributes": {
+          "added": [
+            "Rt",
+            "bounces",
+            "bounces_diffuse",
+            "bounces_reflect",
+            "bounces_specular",
+            "bounces_transmit",
+            "bounces_volume",
+            "fhemi",
+            "fi",
+            "inclusive_traceset",
+            "nlights",
+            "sc",
+            "si",
+            "skip_shadow",
+            "tid",
+            "transp_index",
+            "x",
+            "y"
+          ],
+          "changed": {},
+          "removed": [
+            "outTransparency",
+            "outTransparencyB",
+            "outTransparencyG",
+            "outTransparencyR"
+          ]
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/shader:swatch/ArnoldRenderSwatch:utility/shader",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiStateInt"
+      },
+      "0x115d93": {
+        "attribute_summary": {
+          "added": 68,
+          "changed": 0,
+          "removed": 4
+        },
+        "attributes": {
+          "added": [
+            "N",
+            "NX",
+            "NY",
+            "NZ",
+            "Nf",
+            "NfX",
+            "NfY",
+            "NfZ",
+            "Ng",
+            "NgX",
+            "NgY",
+            "NgZ",
+            "Ngf",
+            "NgfX",
+            "NgfY",
+            "NgfZ",
+            "Ns",
+            "NsX",
+            "NsY",
+            "NsZ",
+            "P",
+            "PX",
+            "PY",
+            "PZ",
+            "Po",
+            "PoX",
+            "PoY",
+            "PoZ",
+            "Rd",
+            "RdX",
+            "RdY",
+            "RdZ",
+            "Ro",
+            "RoX",
+            "RoY",
+            "RoZ",
+            "dDdx",
+            "dDdxX",
+            "dDdxY",
+            "dDdxZ",
+            "dDdy",
+            "dDdyX",
+            "dDdyY",
+            "dDdyZ",
+            "dNdx",
+            "dNdxX",
+            "dNdxY",
+            "dNdxZ",
+            "dNdy",
+            "dNdyX",
+            "dNdyY",
+            "dNdyZ",
+            "dPdu",
+            "dPduX",
+            "dPduY",
+            "dPduZ",
+            "dPdv",
+            "dPdvX",
+            "dPdvY",
+            "dPdvZ",
+            "dPdx",
+            "dPdxX",
+            "dPdxY",
+            "dPdxZ",
+            "dPdy",
+            "dPdyX",
+            "dPdyY",
+            "dPdyZ"
+          ],
+          "changed": {},
+          "removed": [
+            "outTransparency",
+            "outTransparencyB",
+            "outTransparencyG",
+            "outTransparencyR"
+          ]
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/shader:swatch/ArnoldRenderSwatch:utility/shader",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiStateVector"
+      },
+      "0x115d94": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "passthroughA": {
+              "default": {
+                "new": "1",
+                "old": "1.1630777253895982e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/utility/shader:swatch/ArnoldRenderSwatch:utility/shader",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiTraceSet"
+      },
+      "0x115d95": {
+        "attribute_summary": {
+          "added": 1,
+          "changed": 0,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [
+            "matrix"
+          ],
+          "changed": {},
+          "removed": []
+        },
+        "classification": "operator:rendernode/arnold/operator:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiSetTransform"
+      },
+      "0x115d9b": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 8,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "input1A": {
+              "default": {
+                "new": "5.1497718563937027e-42",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input2A": {
+              "default": {
+                "new": "5.1497718563937027e-42",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input3A": {
+              "default": {
+                "new": "",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input4A": {
+              "default": {
+                "new": "5.1497718563937027e-42",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input5A": {
+              "default": {
+                "new": "1.7656360650492695e-43",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input6A": {
+              "default": {
+                "new": "",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input7A": {
+              "default": {
+                "new": "5.1497718563937027e-42",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "input8A": {
+              "default": {
+                "new": "",
+                "old": "4.5914945482066956e-41"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiLayerShader"
+      },
+      "0x115d9d": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "passthroughA": {
+              "default": {
+                "new": "",
+                "old": "4.5914945482066956e-41"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiMatte"
+      },
+      "0x115da9": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 1,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "intersectionA": {
+              "default": {
+                "new": "",
+                "old": "4.5914945482066956e-41"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/shader/surface/arnold/genericShader:rendernode/arnold/shader/surface:shader/surface:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiClipGeo"
+      },
+      "0x115dc1": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 5,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "layerExposure": {
+              "default": {
+                "new": "1.4500860716587499e-39",
+                "old": "true"
+              }
+            },
+            "layerIntensity": {
+              "default": {
+                "new": "1.4500412301078915e-39",
+                "old": "true"
+              }
+            },
+            "layerTintB": {
+              "default": {
+                "new": "0.12211909890174866",
+                "old": "true"
+              }
+            },
+            "layerTintG": {
+              "default": {
+                "new": "6.8803754598348518e-43",
+                "old": "7.0205053062673335e-43"
+              }
+            },
+            "layerTintR": {
+              "default": {
+                "new": "1.4499963885570331e-39",
+                "old": "true"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "imager:rendernode/arnold/imager:swatch/ArnoldRenderSwatch",
+        "node_changes": {},
+        "plugin": "mtoa.mll",
+        "typeName": "aiImagerLightMixer"
       },
       "0x11a482": {
         "attribute_summary": {
@@ -1893,14 +3722,19 @@
         "attribute_summary": {
           "added": 1,
           "changed": 0,
-          "removed": 0
+          "removed": 4
         },
         "attributes": {
           "added": [
             "legacyIntensity"
           ],
           "changed": {},
-          "removed": []
+          "removed": [
+            "aiShadowColor",
+            "aiShadowColorB",
+            "aiShadowColorG",
+            "aiShadowColorR"
+          ]
         },
         "classification": "drawdb/light/areaLight:light",
         "node_changes": {},
@@ -2055,6 +3889,35 @@
         },
         "plugin": "_default",
         "typeName": "addMatrix"
+      },
+      "0x4443414d": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "aiShutterCurveX": {
+              "default": {
+                "new": "1.448157884971839e-39",
+                "old": "true"
+              }
+            },
+            "aiShutterCurveY": {
+              "default": {
+                "new": "6.8803754598348518e-43",
+                "old": "7.0205053062673335e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "camera:drawdb/geometry/camera",
+        "node_changes": {},
+        "plugin": "_default",
+        "typeName": "camera"
       },
       "0x44444254": {
         "attribute_summary": {
@@ -3955,6 +5818,35 @@
         "plugin": "_default",
         "typeName": "solidify"
       },
+      "0x53524341": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "aiShutterCurveX": {
+              "default": {
+                "new": "1.448157884971839e-39",
+                "old": "true"
+              }
+            },
+            "aiShutterCurveY": {
+              "default": {
+                "new": "6.8803754598348518e-43",
+                "old": "7.0205053062673335e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "camera:drawdb/geometry/stereoRigCamera",
+        "node_changes": {},
+        "plugin": "_default",
+        "typeName": "stereoRigCamera"
+      },
       "0x53544453": {
         "attribute_summary": {
           "added": 4,
@@ -4149,6 +6041,35 @@
         "node_changes": {},
         "plugin": "_default",
         "typeName": "textureDeformer"
+      },
+      "0x55465043": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 2,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "aiShutterCurveX": {
+              "default": {
+                "new": "1.448157884971839e-39",
+                "old": "true"
+              }
+            },
+            "aiShutterCurveY": {
+              "default": {
+                "new": "6.8803754598348518e-43",
+                "old": "7.0205053062673335e-43"
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "camera:drawdb/subscene/ufe/drawShape",
+        "node_changes": {},
+        "plugin": "_default",
+        "typeName": "ufeProxyCameraShape"
       },
       "0x5642414b": {
         "attribute_summary": {
@@ -4525,6 +6446,77 @@
         "plugin": "matrixNodes.mll",
         "typeName": "transposeMatrix"
       },
+      "0x58000306": {
+        "attribute_summary": {
+          "added": 0,
+          "changed": 3,
+          "removed": 0
+        },
+        "attributes": {
+          "added": [],
+          "changed": {
+            "castsShadows": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "primaryVisibility": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            },
+            "receiveShadows": {
+              "flags": {
+                "new": [
+                  "connectable",
+                  "in",
+                  "out",
+                  "storable"
+                ],
+                "old": [
+                  "connectable",
+                  "extension",
+                  "in",
+                  "keyable",
+                  "out",
+                  "storable"
+                ]
+              }
+            }
+          },
+          "removed": []
+        },
+        "classification": "drawdb/subscene/xgmDescription",
+        "node_changes": {},
+        "plugin": "xgenToolkit.mll",
+        "typeName": "xgmDescription"
+      },
       "0x58000810": {
         "attribute_summary": {
           "added": 0,
@@ -4595,11 +6587,11 @@
   },
   "previous_version": "2023",
   "summary": {
-    "added": 59,
-    "changed": 140,
+    "added": 60,
+    "changed": 169,
     "failed_new": 0,
     "failed_previous": 0,
     "removed": 0,
-    "unchanged": 960
+    "unchanged": 1092
   }
 }
